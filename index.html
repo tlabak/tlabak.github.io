@@ -101,7 +101,9 @@
                 enterButton.on('click', function(e) {
                     e.preventDefault();
                     welcomeSection.addClass('content-hidden').fadeOut();
-					window.open('https://tlabak.github.io/home.html', '_self');
+					setTimeout(function() {
+                    	window.open('https://tlabak.github.io/home.html', '_self');
+                }, 250);
                 });
                 
                 
@@ -112,19 +114,4 @@
         </script>
 
     </body>
-</html>
-
-<!--This is where the Home Page Begins-->
-<html>
-	<head>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="intro.css">
-	</head>
-	<body>
-		<nav>
-	    	<ul>
-	        	<li><a href="./home.html">Home</a></li>
-	    	</ul>
-		</nav>
-	</body>
 </html>
