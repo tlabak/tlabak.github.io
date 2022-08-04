@@ -10,7 +10,7 @@ body {
   width: 100vw;
 }
 h1 {
-  color: #333;
+  color: rgb(255, 255, 255);
   font-family: tahoma;
   font-size: 3rem;
   font-weight: 100;
@@ -28,8 +28,8 @@ h1 span {
 }
 
 .message {
-  background-color: yellow;
-  color: #333;
+  background-color: rgb(255, 0, 230);
+  color: rgb(255, 255, 255);
   display: block;
   font-weight: 900;
   overflow: hidden;
@@ -40,7 +40,7 @@ h1 span {
   animation: openclose 5s ease-in-out infinite;
 }
 
-.word1, .word2, .word3 {
+.word1, .word2, .word3, .word4, .word5, .word6, .word7 {
   font-family: tahoma;
 }
 
