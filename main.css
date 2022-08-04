@@ -81,7 +81,7 @@ ul.posts li {
     width: 100vw;
   }
   h2 {
-    color: rgb(191, 189, 189);
+    color: rgb(255, 255, 255);
     font-family: tahoma;
     font-size: 3rem;
     font-weight: 100;
@@ -90,7 +90,6 @@ ul.posts li {
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    text-align: center;
     width: 550px;
   }
   
