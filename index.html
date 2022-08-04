@@ -47,7 +47,7 @@
                 display: block;
                 text-align: center;
                 font-size: 1em;
-                text-decoration: none;
+                text-decoration: underline dotted;
                 text-transform: lowercase;
                 color: #d612dc;
                 opacity: 1;
@@ -76,8 +76,8 @@
                 <ul class="fly-in-text">
                     <li>Hi </li>
                     <li>there!</li>
-                  </ul>
-                <nav><li><a href="./home.html" class="enter-button">click me</a></li></nav>
+                </ul>
+                <nav><a href="./home.html" class="enter-button">click me</a></nav>
             </div>
         </div>
         
@@ -101,6 +101,7 @@
                 enterButton.on('click', function(e) {
                     e.preventDefault();
                     welcomeSection.addClass('content-hidden').fadeOut();
+					window.open('https://tlabak.github.io/home.html', '_self');
                 });
                 
                 
@@ -116,34 +117,14 @@
 <!--This is where the Home Page Begins-->
 <html>
 	<head>
-		<title>The Website of Trey Labak</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="intro.css">
 	</head>
 	<body>
-		<div class="typewriter">
-            <h1>my name is Trey :)</h1>
-        </div>
 		<nav>
 	    	<ul>
 	        	<li><a href="./home.html">Home</a></li>
-	        	<li><a href="/resume">Resume</a></li>
-	        	<li><a href="./portfolio.html">Portfolio</a></li>
 	    	</ul>
 		</nav>
-		<div class="container">
-			
-			Master's of Science in Electrical Engineering Candidate at Northwestern University
-		
-			Illinois Institute of Technology (EE Bachelor's Degree, 2022)
-
-		</div><!-- /.container -->
-		<footer>
-	    	<ul>
-	        	<li><a href="mailto:trcbska@gmail.com">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/trey-labak-a05096197/">LinkedIn</a></li>
-	        	<li><a href="https://github.com/tlabak">Github</a></li>
-			</ul>
-		</footer>
 	</body>
 </html>
