@@ -69,17 +69,6 @@ ul.posts li {
   }
 
   /* This is the text scroll animation */
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-  }
   h2 {
     color: rgb(255, 255, 255);
     font-family: tahoma;
