@@ -100,7 +100,7 @@ ul.posts li {
   }
   .message {
     background-color: rgb(215, 16, 222);
-    color: #333;
+    color: rgb(206, 206, 206);
     display: block;
     font-weight: 900;
     overflow: hidden;
