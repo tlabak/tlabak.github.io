@@ -70,6 +70,7 @@ ul.posts li {
 
   /* This is the text scroll animation */
   h2 {
+    align-items: center;
     color: rgb(0, 0, 0);
     font-family: tahoma;
     font-size: 3rem;
