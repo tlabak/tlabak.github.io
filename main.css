@@ -3,6 +3,10 @@ body {
     width: 70%;
     font-family: system-ui, monospace;
     font-weight: 700;
+    /*edit*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -98,7 +102,7 @@ ul.posts li {
     animation: openclose 10s ease-in-out infinite;
   }
   
-  .word1, .word2, .word3, .word4, .word5, .word6, .word7 {
+  .word1, .word2, .word3, .word4, .word5, .word6, .word7, .word8 {
     font-family: tahoma;
   }
   
@@ -111,11 +115,11 @@ ul.posts li {
       width: 0;
     }
     15% {
-      width: 230px;
+      width: 280px;
     }
     30% {
       top: 0.2rem;
-      width: 230px;
+      width: 280px;
     }
     33% {
       top: 0.2rem;
