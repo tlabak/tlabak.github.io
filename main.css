@@ -74,7 +74,7 @@ ul.posts li {
 
   /* This is the text scroll animation */
   h2 {
-    color: #333;
+    color: rgb(0, 0, 0);
     font-family: tahoma;
     font-size: 3rem;
     font-weight: 100;
@@ -115,11 +115,11 @@ ul.posts li {
       width: 0;
     }
     15% {
-      width: 280px;
+      width: 300px;
     }
     30% {
       top: 0.2rem;
-      width: 280px;
+      width: 300px;
     }
     33% {
       top: 0.2rem;
