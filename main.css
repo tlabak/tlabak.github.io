@@ -73,7 +73,7 @@ ul.posts li {
     align-items: center;
     color: rgb(0, 0, 0);
     font-family: tahoma;
-    font-size: 2rem;
+    font-size: 3rem; /*3rem*/
     font-weight: 100;
     line-height: 1.5;
     text-transform: lowercase;
@@ -83,8 +83,8 @@ ul.posts li {
     width: 800px;
   }
   h2 span {
-    font-size: 20px; /*40px*/
-    margin-left: 20px; /*40px*/
+    font-size: 30px; /*40px*/
+    margin-left: 30px; /*40px*/
   }
   .message {
     background-color: rgb(215, 16, 222);
