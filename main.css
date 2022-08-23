@@ -95,7 +95,7 @@ ul.posts li {
     position: absolute;
     padding-left: 0.5rem;
     top: 0.2rem;
-    left: 375px;
+    left: 355px;
     animation: openclose 10s ease-in-out infinite;
   }
   
