@@ -84,7 +84,7 @@ ul.posts li {
   }
   h2 span {
     font-size: 30px; /*40px*/
-    margin-left: 80px; /*40px*/
+    margin-left: 150px; /*40px*/
   }
   .message {
     background-color: rgb(215, 16, 222);
@@ -95,7 +95,7 @@ ul.posts li {
     position: absolute;
     padding-left: 0.5rem;
     top: 0.2rem;
-    left: 345px;
+    left: 500px;
     animation: openclose 10s ease-in-out infinite;
   }
   
