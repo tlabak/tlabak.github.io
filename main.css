@@ -67,7 +67,16 @@ ul.posts li {
     from, to { border-color: transparent }
     50% { border-color: rgb(215, 16, 222); }
   }
-
+  h3 {
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: tahoma;
+    font-size: 30px;
+    font-weight: 100;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
   /* This is the text scroll animation */
   h2 {
     align-items: center;
