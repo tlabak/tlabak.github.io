@@ -2,7 +2,7 @@ body {
     margin: 50px auto;
     width: 70%;
     font-family: system-ui, monospace;
-    font-weight: 150;
+    font-weight: normal;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
