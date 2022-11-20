@@ -4,113 +4,123 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>welcome :)</title>
-        <style type="text/css">
-            
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            body {
-                font-family: system-ui, monospace;
-                font-weight: 700;
-            }
-            .welcome-section {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background-color: #000;
-                overflow: hidden;
-            }
-            .welcome-section .content-wrap {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate3d(-50%, -50%, 0);
-            }
-            .welcome-section .content-wrap .fly-in-text {
-                list-style: none;
-            }
-            .welcome-section .content-wrap .fly-in-text li {
-                display: inline-block;
-                margin-right: 30px;
-                font-size: 5em;
-                color: #fff;
-                opacity: 1;
-                transition: all 2s ease;
-            }
-            .welcome-section .content-wrap .fly-in-text li:last-child {
-                margin-right: 0;
-            }
-            .welcome-section .content-wrap .enter-button {
-                display: block;
-                text-align: center;
-                font-size: 1em;
-                text-decoration: wavy underline;
-                text-transform: lowercase;
-                color: #d612dc;
-                opacity: 1;
-                transition: all 1s ease 2s;
-            }
-            
-            .welcome-section.content-hidden .content-wrap .fly-in-text li { opacity: 0; }
-            .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(1) { transform: translate3d(-100px, 0, 0); }
-            .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(2) { transform: translate3d(100px, 0, 0); }
-            .welcome-section.content-hidden .content-wrap .enter-button { opacity: 0; transform: translate3d(0, -30px, 0); }
-            
-            @media (min-width: 800px) {
-                .welcome-section .content-wrap .fly-in-text li { font-size: 10em; }
-                .welcome-section .content-wrap .enter-button { font-size: 1.5em; }
-            }
-            
-            
-            
+        <style type="text/scss">
+                .var-highlight{
+                    color: #C0AD60;
+                }
+                .string-highlight{
+                    color: rgba(253, 149, 90, 0.8);
+                }
+
+                #typewriter{
+                    font-size: 2em;
+                    margin: 0;
+                    font-family: "Courier New";
+
+                    &:after{
+                        content: "|";
+                        animation: blink 500ms linear infinite alternate;
+                    }
+                }
+
+                @-webkit-keyframes blink{
+                    0%{opacity: 0;}
+                    100%{opacity: 1;}
+                }
+
+                @-moz-keyframes blink{
+                    0%{opacity: 0;}
+                    100%{opacity: 1;}
+                }
+
+                @keyframes blink{
+                    0%{opacity: 0;}
+                    100%{opacity: 1;}
+                }
         </style>
     </head>
     <body>
         
-        
-        <div class="welcome-section content-hidden">
-            <div class="content-wrap">
-                <ul class="fly-in-text">
-                    <li>Hi </li>
-                    <li>there!</li>
-                </ul>
-                <nav><a href="./home.html" class="enter-button">click me</a></nav>
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        
+        </div><pre id="typewriter">
+            <span class="var-highlight">var</span> object = {
+                name: <span class="string-highlight">'Foo'</span>,
+                type: <span class="string-highlight">'Bar'</span>,
+                location: <span class="string-highlight">'Earth'</span>,
+                properties:[<span class="string-highlight">'Javascript'</span>,
+                            <span class="string-highlight">'HTML'</span>,
+                            <span class="string-highlight">'CSS'</span>];
+            }; </pre>
+            
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript">
             
-            $(function() {
-                
-                var welcomeSection = $('.welcome-section'),
-                    enterButton = welcomeSection.find('.enter-button');
-                
-                setTimeout(function() {
-                    welcomeSection.removeClass('content-hidden');
-                }, 500);
-                
-                enterButton.on('click', function(e) {
-                    e.preventDefault();
-                    welcomeSection.addClass('content-hidden').fadeOut();
-					setTimeout(function() {
-                    	window.open('https://tlabak.github.io/home.html', '_self');
-                }, 350);
-                });
-                
-                
-            })();
-            
-            
-            
+            function setupTypewriter(t) {
+            var HTML = t.innerHTML;
+
+            t.innerHTML = "";
+
+            var cursorPosition = 0,
+            tag = "",
+            writingTag = false,
+            tagOpen = false,
+            typeSpeed = 100,
+            tempTypeSpeed = 0;
+
+            var type = function() {
+        
+                if (writingTag === true) {
+                    tag += HTML[cursorPosition];
+                 }
+
+                if (HTML[cursorPosition] === "<") {
+                    tempTypeSpeed = 0;
+                if (tagOpen) {
+                    tagOpen = false;
+                    writingTag = true;
+                } else {
+                    tag = "";
+                    tagOpen = true;
+                    writingTag = true;
+                    tag += HTML[cursorPosition];
+                }
+            }
+                if (!writingTag && tagOpen) {
+                    tag.innerHTML += HTML[cursorPosition];
+            }
+                if (!writingTag && !tagOpen) {
+                    if (HTML[cursorPosition] === " ") {
+                        tempTypeSpeed = 0;
+                }
+                else {
+                  tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+                }
+                t.innerHTML += HTML[cursorPosition];
+            }
+                if (writingTag === true && HTML[cursorPosition] === ">") {
+                    tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+                    writingTag = false;
+                if (tagOpen) {
+                    var newSpan = document.createElement("span");
+                    t.appendChild(newSpan);
+                    newSpan.innerHTML = tag;
+                    tag = newSpan.firstChild;
+                }
+            }
+
+            cursorPosition += 1;
+            if (cursorPosition < HTML.length - 1) {
+              setTimeout(type, tempTypeSpeed);
+            }
+
+        };
+
+        return {
+          type: type
+        };
+    }
+    var typer = document.getElementById('typewriter');
+    typewriter = setupTypewriter(typewriter);
+    typewriter.type();
         </script>
 
     </body>
