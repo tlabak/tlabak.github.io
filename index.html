@@ -11,11 +11,18 @@
                 .var-highlight {
                     color: #ff006f;
                 }
-
                 .string-highlight {
                     color: rgba(0, 255, 47, 0.877);
                 }
-
+                .field-highlight {
+                    color: rgba(0, 191, 255, 0.978);
+                }
+                .operator-highlight {
+                    color: rgba(251, 0, 255, 0.8);
+                }
+                .list-highlight {
+                    color: rgb(255, 234, 0);
+                }
                 .text-highlight {
                     color: rgba(255, 255, 255, 0.8);
                 }
@@ -52,14 +59,14 @@
         
         </div><pre id="typewriter">
             <span class="text-highlight">// To explore further, click on my name :)</span>
-            <span class="var-highlight">var</span> <span class="text-highlight">object = {</span>
-                <span class="text-highlight">name: </span><span class="string-highlight">'Trey'</span><span class="text-highlight">;</span>
-                <span class="text-highlight">education: </span><span class="string-highlight">'Electrical Engineering'</span><span class="text-highlight">;</span>
-                <span class="text-highlight">location: </span><span class="string-highlight">'Chicago, IL'</span></span><span class="text-highlight">;</span>
-                <span class="text-highlight">properties:[</span><span class="string-highlight">'',</span>
-                            <span class="string-highlight">'',</span>
-                            <span class="string-highlight">''</span><span class="text-highlight">];</span>
-                <span class="text-highlight">};</span> </pre>
+            <span class="var-highlight">var</span> <span class="text-highlight">object = </span><span class="operator-highlight">{</span>
+                <span class="field-highlight">name: </span><span class="string-highlight">'Trey'</span><span class="text-highlight">;</span>
+                <span class="field-highlight">education: </span><span class="string-highlight">'Electrical Engineering'</span><span class="text-highlight">;</span>
+                <span class="field-highlight">location: </span><span class="string-highlight">'Chicago, IL'</span></span><span class="text-highlight">;</span>
+                <span class="field-highlight">properties: <span class = "list-highlight">[</span></span><span class="string-highlight">''</span><span class="text-highlight">,</span>
+                            <span class="string-highlight">''</span><span class="text-highlight">,</span>
+                            <span class="string-highlight">''</span><span class="list-highlight">]</span><span class="text-highlight">;</span>
+                <span class="operator-highlight">}</span><span class="text-highlight">;</span> </pre>
             
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript">
