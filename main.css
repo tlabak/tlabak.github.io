@@ -3,7 +3,7 @@ body {
     width: 70%;
     font-family: system-ui, monospace;
     font-weight: normal;
-    font-size: 20px;
+    /*font-size: 20px;*/
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
