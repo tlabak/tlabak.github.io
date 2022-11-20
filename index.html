@@ -53,6 +53,21 @@
                         opacity: 1;
                     }
                 }
+                #highlight {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: -1;
+                    background-color: #ffdd00;
+                    height: 40px; 
+                    width: 0%;
+                    transition: width 0.5s;
+                    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+                }
+
+                #item:hover #highlight{
+                /* hardcoded */
+                width: 300px; 
+                }
         </style>
     </head>
     <body>
@@ -60,7 +75,7 @@
         </div><pre id="typewriter">
             <span class="text-highlight">// To explore further, click on my name :)</span>
             <span class="var-highlight">var</span> <span class="text-highlight">object = </span><span class="operator-highlight">{</span>
-                <span class="field-highlight">name: </span><span class="string-highlight">'Trey'</span><span class="text-highlight">;</span>
+                <span class="field-highlight">name: </span><div id="item"><div id="highlight"><span class="string-highlight">'Trey'</span></div><div id="item"></div><span class="text-highlight">;</span>
                 <span class="field-highlight">education: </span><span class="string-highlight">'Electrical Engineering'</span><span class="text-highlight">;</span>
                 <span class="field-highlight">location: </span><span class="string-highlight">'Chicago, IL'</span></span><span class="text-highlight">;</span>
                 <span class="field-highlight">properties: </span><span class = "list-highlight">[</span><span class="string-highlight">''</span><span class="text-highlight">,</span>
