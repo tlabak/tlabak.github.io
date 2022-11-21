@@ -72,7 +72,7 @@ ul.posts li {
     from, to { border-color: transparent }
     50% { border-color: rgb(215, 16, 222); }
   }
-  h3 {
+  p {
     text-align: left;
     color: rgb(255, 255, 255);
     font-family: tahoma;
