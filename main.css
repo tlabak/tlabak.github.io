@@ -3,6 +3,7 @@ body {
     width: 70%;
     font-family: system-ui, monospace;
     font-weight: normal;
+    background-color: rgb(0, 0, 0);
     /*font-size: 20px;*/
 }
 nav ul, footer ul {
@@ -70,7 +71,7 @@ ul.posts li {
   }
   h3 {
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: tahoma;
     font-size: 20px;
     font-weight: bold;
@@ -81,7 +82,7 @@ ul.posts li {
   /* This is the text scroll animation */
   h2 {
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: tahoma;
     font-size: 3rem; /*3rem*/
     font-weight: 100;
