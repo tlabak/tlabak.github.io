@@ -71,31 +71,19 @@ ul.posts li {
     50% { border-color: rgb(215, 16, 222); }
   }
   h3 {
-    align-items: center;
+    align-items: left;
     color: rgb(255, 255, 255);
     font-family: tahoma;
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
+    font-size: 1.5em;
   }
   /* This is the text scroll animation */
   h2 {
     align-items: center;
     color: rgb(255, 255, 255);
     font-family: tahoma;
-    font-size: 3rem; /*3rem*/
-    font-weight: 100;
-    line-height: 1.5;
-    text-transform: lowercase;
+    font-size: 2em;
+    font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
-    width: 800px;
-  }
-  h2 span {
-    font-size: 30px; /*40px*/
-    margin-left: 140px; /*40px*/
-    color: rgb(255, 255, 255);
   }
