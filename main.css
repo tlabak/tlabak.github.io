@@ -18,6 +18,12 @@ nav ul li, footer ul li {
     margin-right: 20px;
     font-size: 1.35em;
 }
+p {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-family: tahoma;
+  font-size: 1em;
+}
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -30,10 +36,15 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: rgb(215, 16, 222);
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: tahoma;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -71,21 +82,4 @@ ul.posts li {
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: rgb(215, 16, 222); }
-  }
-  p {
-    text-align: left;
-    color: rgb(255, 255, 255);
-    font-family: tahoma;
-    font-size: 1em;
-  }
-  /* This is the text scroll animation */
-  h2 {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: tahoma;
-    font-size: 1.5em;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
   }
