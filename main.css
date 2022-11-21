@@ -13,10 +13,10 @@ nav ul, footer ul {
     font-weight: bold;
 }
 nav ul li, footer ul li {
+    text-align: center;
     display: inline;
-    align-items: center;
     margin-right: 20px;
-    font-size: 1.75em;
+    font-size: 1.35em;
 }
 a {
     text-decoration: none;
