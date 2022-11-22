@@ -11,21 +11,18 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    position: absolute;
 }
 nav ul li, footer ul li {
     text-align: center;
     display: inline;
     margin-right: 20px;
     font-size: 1.35em;
-    position: absolute;
 }
 p {
   text-align: left;
   color: rgb(255, 255, 255);
   font-family: tahoma;
   font-size: 1em;
-  position: absolute;
 }
 a {
     text-decoration: none;
@@ -38,7 +35,6 @@ h1 {
     font-size: 2.25em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: rgb(215, 16, 222);
-    position: absolute;
 }
 h2 {
   text-align: center;
@@ -48,7 +44,6 @@ h2 {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  position: absolute;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -67,7 +62,6 @@ ul.posts li {
 /* This is the typewriter animation */
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    position: absolute;
     border-right: .15em solid rgb(215, 16, 222); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -92,7 +86,7 @@ ul.posts li {
   /*Flying through Space effect*/
   #space, .stars {
     overflow: hidden;
-    position: relative;
+    /*position: relative;*/
     top: 0;
     bottom: 0;
     left: 0;
