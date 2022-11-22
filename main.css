@@ -85,7 +85,7 @@ ul.posts li {
 
   /*Flying through Space effect*/
   #space, .stars {
-    overflow: auto;
+    overflow: hidden;
     z-index: -1;
     position: sticky;
     top: 0;
@@ -102,7 +102,7 @@ ul.posts li {
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
     background-repeat: repeat;
-    background-size: cover;
+    background-size: 200px 200px;
     animation: zoom 5s infinite;
     opacity: 0;
 }
