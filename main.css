@@ -47,10 +47,10 @@ h2 {
 }
 h3 {
   text-align: center;
-  color: rgb(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255, 0.65);
+  font-style: italic;
   font-family: tahoma;
   font-size: 1.25em;
-  font-style: italic;
   white-space: nowrap;
   overflow: hidden;
 }
