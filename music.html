@@ -1,145 +1,88 @@
-<body>
-<canvas id="canvas">
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
+<!DOCTYPE html>
+    <html>
+        <head><title>space</title>
+            <meta charset=”utf-8">
+            <link href=”star.css” rel=”stylesheet”>
+        </head>
+        <body>
+            <h1>SPACE TRAVEL</h1>
+            <div id=”space”>
+            <div class=”stars”></div>
+            <div class=”stars”></div>
+            <div class=”stars”></div>
+            <div class=”stars”></div>
+            </div>
+        </body>
+        <style type="text/css">
+            body{
+                background: #000;
+                font-family: ‘Orbitron’, sans-serif;
+                }
+                h1 {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                margin: -1.5em -2.5em;
+                width: 5em;
+                color: white;
+                font-size: 5em;
+                text-align: center;
+                text-shadow: 0 0 3px #6cf;
+                }
+                #space, .stars {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                }
+                .stars {
+                background-image:
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+                background-repeat: repeat;
+                background-size: 200px 200px;
+                animation: zoom 5s infinite;
+                opacity: 0;
+                }
 
-        canvas {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <script type="text/javascript">
-        var canvas = document.getElementById('canvas');
-    var flr = Math.floor;
-    
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    
-    var halfw = canvas.width / 2,
-        halfh = canvas.height / 2,
-        step = 2,
-        warpZ = 12,
-        speed = 0.075;
-    var stampedDate = new Date();
-    
-    var ctx = canvas.getContext('2d');
-    
-    ctx.fillStyle = 'black';
-    ctx.fillRect(0,0, canvas.width, canvas.height);
-    
-    function rnd(num1, num2) {
-        return flr(Math.random() * num2 * 2) + num1;
-    }
-    
-    function getColor() {
-        return 'hsla(200,100%, ' + rnd(50,100) + '%, 1)';
-    }
-    
-    var star = function() {
-        var v = vec3.fromValues(rnd(0 - halfw,halfw),rnd(0 - halfh,halfh), rnd(1, warpZ));
-        
-        
-        this.x = v[0];
-        this.y = v[1];
-        this.z = v[2];
-        this.color = getColor();
-        
-        
-        this.reset = function() {
-            v = vec3.fromValues(rnd(0 - halfw,halfw),rnd(0 - halfh,halfh), rnd(1, warpZ));
-    
-            this.x = v[0];
-            this.y = v[1];
-            this.color = getColor();
-            vel = this.calcVel();
-        }
-        
-        this.calcVel = function() {
-            
-            return vec3.fromValues(0, 0, 0 - speed);
-        };
-        
-        var vel = this.calcVel();
-        
-        this.draw = function() {
-            vel = this.calcVel();
-            v = vec3.add(vec3.create(), v, vel);
-            var x = v[0] / v[2];
-            var y = v[1] / v[2];
-            var x2 = v[0] / (v[2] + speed * 0.50);
-            var y2 = v[1] / (v[2] + speed * 0.50);
-            
-            ctx.strokeStyle = this.color;
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-            ctx.lineTo(x2, y2);
-            ctx.stroke();
-            
-            if (x < 0 - halfw || x > halfw || y < 0 - halfh || y > halfh) {
-                this.reset();
+                .stars:nth-child(1) {
+                background-position: 50% 50%;
+                animation-delay: 0s;
+                }
+                .stars:nth-child(2) {
+                background-position: 20% 60%;
+                animation-delay: 1s;
+                }
+                .stars:nth-child(3) {
+                background-position: -20% -30%;
+                animation-delay: 2s;
+                }
+                .stars:nth-child(4) {
+                background-position: 40% -80%;
+                animation-delay: 3s;
+                }
+                @keyframes zoom {
+                0% {
+                opacity: 0;
+                transform: scale(0.5);
+                animation-timing-function: ease-in;
+                }
+                85% {
+                opacity: 1;
+                transform: scale(2.8);
+                animation-timing-function: linear;
+                }
+                100% {
+                opacity: 0;
+                transform: scale(3.5);
+                }
             }
-        };
-        
-    }
-    
-    var starfield = function() {
-        var numOfStars = 250;
-        
-        var stars = [];
-        
-        function _init() {
-            for(var i = 0, len = numOfStars; i < len; i++) {
-                stars.push(new star());
-            }
-        }    
-        
-        _init();
-        
-        this.draw = function() {
-            ctx.translate(halfw, halfh);
-            
-            for(var i = 0, len = stars.length; i < len; i++) {
-                var currentStar = stars[i];
-                
-                currentStar.draw();
-            }
-        };
-        
-    }
-    
-    var mStarField = new starfield();
-    
-    function draw() {
-        
-        // make 5 seconds
-        var millSeconds = 1000 * 10;
-        
-        var currentTime = new Date();
-        
-        speed = 0.025;
-      
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        ctx.fillStyle = 'rgba(0,0,0,0.2)';
-        ctx.fillRect(0,0, canvas.width, canvas.height);
-        
-        mStarField.draw();
-        
-        window.requestAnimationFrame(draw);
-    }
-    
-    draw();
-    
-    window.onresize = function() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-    
-        halfw = canvas.width / 2;
-        halfh = canvas.height / 2;
-    };
-    
-    </script>
-</canvas>
-</body>
+        </style>
+</html>
