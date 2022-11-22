@@ -85,7 +85,7 @@ ul.posts li {
 
   /*Flying through Space effect*/
   #space, .stars {
-    overflow: auto;
+    overflow: visible;
     z-index: -1;
     position: absolute;
     top: 0;
