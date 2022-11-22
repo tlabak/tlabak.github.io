@@ -45,6 +45,15 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
 }
+h3 {
+  text-align: center;
+  color: rgb(255, 255, 255, 0.5);
+  font-family: tahoma;
+  font-size: 1em;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+}
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
