@@ -47,7 +47,15 @@ h2 {
 }
 h3 {
   text-align: center;
-  color: rgb(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255, 0.8);
+  font-family: tahoma;
+  font-size: 1.25em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+h4 {
+  text-align: center;
+  color: rgb(255, 255, 255, 0.45);
   font-family: tahoma;
   font-size: 1em;
   font-style: italic;
