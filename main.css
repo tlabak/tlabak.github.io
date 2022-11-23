@@ -90,13 +90,12 @@ ul.posts li {
   }
 
   /*IMAGES*/
-  .center {
+  .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
   }
-  
+
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
