@@ -88,6 +88,14 @@ ul.posts li {
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
   }
+
+  /*IMAGES*/
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
   
   /* The typing effect */
   @keyframes typing {
