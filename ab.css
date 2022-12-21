@@ -3,7 +3,7 @@ body {
     width: 80%;
     font-family: system-ui, monospace;
     font-weight: normal;
-    background-color: rgb(167, 237, 241);
+    background-color: #f5f5dc;
     /*font-size: 20px;*/
 }
 nav ul, footer ul {
@@ -20,13 +20,13 @@ nav ul li, footer ul li {
 }
 p {
   text-align: left;
-  color: rgb(255, 255, 255);
+  color: #7DF9FF;
   font-family: tahoma;
   font-size: 1.15em;
 }
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #7DF9FF;
 }
 a:hover {
     text-decoration: underline;
@@ -34,11 +34,11 @@ a:hover {
 h1 {
     font-size: 2.25em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: rgb(215, 16, 222);
+    color: #7DF9FF;
 }
 h2 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(65, 17, 0);
   font-family: tahoma;
   font-size: 1.5em;
   font-weight: bold;
@@ -56,7 +56,7 @@ h3 {
 }
 h4 {
   text-align: center;
-  color: rgb(255, 255, 255, 0.5);
+  color: 	#6F4E37;
   font-family: tahoma;
   font-size: 1em;
   font-style: italic;
@@ -64,7 +64,7 @@ h4 {
   overflow: hidden;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid 	#6F4E37;
     font-size: .8em;
 }
 
