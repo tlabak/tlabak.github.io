@@ -1,0 +1,109 @@
+body {
+    margin: 40px auto;
+    width: 80%;
+    font-family: system-ui, monospace;
+    font-weight: normal;
+    background-color: rgb(167, 237, 241);
+    /*font-size: 20px;*/
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.35em;
+}
+p {
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-family: tahoma;
+  font-size: 1.15em;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 2.25em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: rgb(215, 16, 222);
+}
+h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: tahoma;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+h3 {
+  text-align: center;
+  color: rgb(255, 255, 255, 0.65);
+  font-style: italic;
+  font-family: tahoma;
+  font-size: 1.25em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+h4 {
+  text-align: center;
+  color: rgb(255, 255, 255, 0.5);
+  font-family: tahoma;
+  font-size: 1em;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 2em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+/* This is the typewriter animation */
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(215, 16, 222); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+  /*IMAGES*/
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(215, 16, 222); }
+  }
