@@ -28,6 +28,7 @@ p {
 a {
     text-decoration: none;
     color: #7DF9FF;
+    text-align: center;
 }
 a:hover {
     text-decoration: underline;
