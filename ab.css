@@ -15,9 +15,10 @@ nav ul, footer ul {
 }
 nav ul li, footer ul li {
     text-align: center;
-    display: inline-block;
-    margin-right: 105px;
+    display: inline-flex;
+    margin-right: 100px;
     font-size: 1.35em;
+    align-items: center;
 }
 p {
   text-align: left;
