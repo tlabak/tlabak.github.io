@@ -129,7 +129,7 @@
                  }
 
                 if (HTML[cursorPosition] === "<") {
-                    tempTypeSpeed = 0;
+                    tempTypeSpeed = 50;
                 if (tagOpen) {
                     tagOpen = false;
                     writingTag = true;
@@ -145,7 +145,7 @@
             }
                 if (!writingTag && !tagOpen) {
                     if (HTML[cursorPosition] === " ") {
-                        tempTypeSpeed = 0;
+                        tempTypeSpeed = 50;
                 }
                 else {
                     tempTypeSpeed = typeSpeed + 50;
