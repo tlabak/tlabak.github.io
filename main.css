@@ -74,8 +74,9 @@ white-space: nowrap;
 overflow: hidden;
 }
 footer {
-  border-top: 1px solid #ffffff;
-  font-size: .8em;
+  height:5px;
+  border-width:0;
+  background-color:rgb(215, 16, 222);
 }
 
 ul.posts { 
