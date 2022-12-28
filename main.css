@@ -31,6 +31,7 @@ hr{
   height:5px;
   border-width:0;
   background-color:rgb(215, 16, 222);
+  border-bottom: 1px
 }
 a {
   font-size: 1.5em;
