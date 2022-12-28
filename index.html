@@ -120,7 +120,7 @@
             writingTag = false,
             tagOpen = false,
             typeSpeed = 150,
-            tempTypeSpeed = 50;
+            tempTypeSpeed = 0;
 
             var type = function() {
         
@@ -129,7 +129,7 @@
                  }
 
                 if (HTML[cursorPosition] === "<") {
-                    tempTypeSpeed = 50;
+                    tempTypeSpeed = 0;
                 if (tagOpen) {
                     tagOpen = false;
                     writingTag = true;
@@ -145,7 +145,7 @@
             }
                 if (!writingTag && !tagOpen) {
                     if (HTML[cursorPosition] === " ") {
-                        tempTypeSpeed = 50;
+                        tempTypeSpeed = 0;
                 }
                 else {
                     tempTypeSpeed = typeSpeed + 50;
