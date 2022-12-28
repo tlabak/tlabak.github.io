@@ -119,7 +119,7 @@
             tag = "",
             writingTag = false,
             tagOpen = false,
-            typeSpeed = 150,
+            typeSpeed = 10,
             tempTypeSpeed = 0;
 
             var type = function() {
@@ -148,13 +148,14 @@
                         tempTypeSpeed = 0;
                 }
                 else {
-                    tempTypeSpeed = typeSpeed + 50;
+                    tempTypeSpeed = typeSpeed;
                   //tempTypeSpeed = (Math.random() * typeSpeed) + 50;
                 }
                 t.innerHTML += HTML[cursorPosition];
             }
                 if (writingTag === true && HTML[cursorPosition] === ">") {
-                    tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+                    tempTypeSpeed = typeSpeed;
+                    //tempTypeSpeed = (Math.random() * typeSpeed) + 50;
                     writingTag = false;
                 if (tagOpen) {
                     var newSpan = document.createElement("span");
