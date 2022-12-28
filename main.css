@@ -26,6 +26,11 @@ color: #ffffff;
 font-family: tahoma;
 font-size: 1.15em;
 }
+hr{
+  height:5px;
+  border-width:0;
+  background-color:rgb(215, 16, 222);
+}
 a {
   font-size: 1.5em;
   text-decoration: none;
@@ -38,7 +43,7 @@ a:hover {
 h1 {
   font-size: 2.25em;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  color: rgb(215, 16, 222);;
+  color: rgb(215, 16, 222);
 }
 h2 {
 text-align: center;
