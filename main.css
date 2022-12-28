@@ -16,7 +16,7 @@ nav ul, footer ul {
 nav ul li, footer ul li {
   text-align: center;
   display: inline-flex;
-  margin-right: 100px;
+  margin-right: 0px;
   font-size: 1.35em;
   align-items: center;
 }
@@ -60,7 +60,7 @@ overflow: hidden;
 }
 h4 {
 text-align: center;
-color: #ffffff;
+color: rgba(255, 255, 255, 0.65);
 font-family: tahoma;
 font-size: 1em;
 font-style: italic;
