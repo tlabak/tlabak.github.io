@@ -16,7 +16,8 @@ nav ul, footer ul {
 nav ul li, footer ul li {
   text-align: center;
   display: inline-flex;
-  margin-right: 0px;
+  margin-right: 50px;
+  margin-left: 50px;
   font-size: 1.35em;
   align-items: center;
 }
