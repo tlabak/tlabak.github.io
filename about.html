@@ -57,13 +57,15 @@
     </div>
     <script>
         let squares = document.querySelectorAll('.square');
-        let currentAnimatingPattern = 1;
         let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
         let currentColor = 0;
+        let intervalId;
         
         //pattern 1 is the full disco floor changing colors
         function pattern1() {
             function changeColor() {
+                clearTimeout(intervalId);
+                let currentAnimatingPattern = 1;
                 if(currentAnimatingPattern !== currentPattern) {
                     return;
                 }
@@ -71,13 +73,15 @@
                     square.style.backgroundColor = colors[currentColor];
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                setTimeout(changeColor, 1000);
+                intervalId = setTimeout(changeColor, 1000);
             }
             changeColor();
         }
         //pattern 2 is the diagonal changing colors
         function pattern2() {
             function changeColor() {
+                clearTimeout(intervalId);
+                let currentAnimatingPattern = 2;
                 if(currentAnimatingPattern !== currentPattern) {
                     return;
                 }
@@ -89,13 +93,15 @@
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                setTimeout(changeColor, 1000);
+                intervalId = setTimeout(changeColor, 1000);
             }
             changeColor();
         }
         //pattern 3 is the each even and odd change color respectively of one another
         function pattern3() {
             function changeColor() {
+                clearTimeout(intervalId);
+                let currentAnimatingPattern = 3;
                 if(currentAnimatingPattern !== currentPattern) {
                     return;
                 }
@@ -105,7 +111,7 @@
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                setTimeout(changeColor, 1000);
+                intervalId = setTimeout(changeColor, 1000);
             }
             changeColor();
         }
