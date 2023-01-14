@@ -57,13 +57,16 @@
     </div>
     <script>
         let squares = document.querySelectorAll('.square');
-        let currentPattern = 1;
+        let currentAnimatingPattern = 1;
         let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
         let currentColor = 0;
         
         //pattern 1 is the full disco floor changing colors
         function pattern1() {
             function changeColor() {
+                if(currentAnimatingPattern !== currentPattern) {
+                    return;
+                }
                 squares.forEach(square => {
                     square.style.backgroundColor = colors[currentColor];
                 });
@@ -75,6 +78,9 @@
         //pattern 2 is the diagonal changing colors
         function pattern2() {
             function changeColor() {
+                if(currentAnimatingPattern !== currentPattern) {
+                    return;
+                }
                 squares.forEach((square, i) => {
                     let row = Math.floor(i / 3);
                     let col = i % 3;
@@ -90,6 +96,9 @@
         //pattern 3 is the each even and odd change color respectively of one another
         function pattern3() {
             function changeColor() {
+                if(currentAnimatingPattern !== currentPattern) {
+                    return;
+                }
                 squares.forEach((square, i) => {
                     if(i % 2 === 0) {
                         square.style.backgroundColor = colors[currentColor];
