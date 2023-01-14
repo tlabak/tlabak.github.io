@@ -60,18 +60,19 @@
         let currentPattern = 1;
         let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
         let currentColor = 0;
-
+        
+        //pattern 1 is the full disco floor changing colors
         function pattern1() {
             function changeColor() {
                 squares.forEach(square => {
                     square.style.backgroundColor = colors[currentColor];
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                requestAnimationFrame(changeColor);
+                setTimeout(changeColor, 1000);
             }
             changeColor();
         }
-
+        //pattern 2 is the diagonal changing colors
         function pattern2() {
             function changeColor() {
                 squares.forEach((square, i) => {
@@ -82,11 +83,11 @@
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                requestAnimationFrame(changeColor);
+                setTimeout(changeColor, 1000);
             }
             changeColor();
         }
-
+        //pattern 3 is the each even and odd change color respectively of one another
         function pattern3() {
             function changeColor() {
                 squares.forEach((square, i) => {
@@ -95,19 +96,22 @@
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-                requestAnimationFrame(changeColor);
+                setTimeout(changeColor, 1000);
             }
             changeColor();
         }
 
+        let changeColorId;
         function changePattern() {
+            clearTimeout(changeColorId);
             if (currentPattern === 1) {
-                pattern1();
+                changeColorId = pattern1();
             } else if (currentPattern === 2) {
-                pattern2();
+                changeColorId = pattern2();
             } else {
-                pattern3();
+                changeColorId = pattern3();
             }
+            currentColor = 0;
             currentPattern = (currentPattern + 1) % 3;
             setTimeout(changePattern, 10000);
         }
