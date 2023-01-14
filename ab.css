@@ -36,7 +36,7 @@ nav ul li, footer ul li {
 }
 p {
 text-align: left;
-color: #ffffff;
+color: #201810;
 font-family: tahoma;
 font-size: 1.15em;
 }
@@ -71,7 +71,7 @@ overflow: hidden;
 }
 h3 {
 text-align: center;
-color: rgba(255, 255, 255, 0.65);
+color: #F4B444;
 font-style: italic;
 font-family: tahoma;
 font-size: 1.25em;
@@ -80,7 +80,7 @@ overflow: hidden;
 }
 h4 {
 text-align: center;
-color: rgba(255, 255, 255, 0.65);
+color: #F4B444;
 font-family: tahoma;
 font-size: 1em;
 font-style: italic;
