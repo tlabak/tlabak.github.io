@@ -62,16 +62,18 @@
         let currentColor = 0;
 
         function pattern1() {
-            setInterval(() => {
+            function changeColor() {
                 squares.forEach(square => {
                     square.style.backgroundColor = colors[currentColor];
                 });
                 currentColor = (currentColor + 1) % colors.length;
-            }, 1000);
+                requestAnimationFrame(changeColor);
+            }
+            changeColor();
         }
 
         function pattern2() {
-            setInterval(() => {
+            function changeColor() {
                 squares.forEach((square, i) => {
                     let row = Math.floor(i / 3);
                     let col = i % 3;
@@ -80,18 +82,22 @@
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-            }, 1000);
+                requestAnimationFrame(changeColor);
+            }
+            changeColor();
         }
 
         function pattern3() {
-            setInterval(() => {
+            function changeColor() {
                 squares.forEach((square, i) => {
                     if(i % 2 === 0) {
                         square.style.backgroundColor = colors[currentColor];
                     }
                 });
                 currentColor = (currentColor + 1) % colors.length;
-            }, 1000);
+                requestAnimationFrame(changeColor);
+            }
+            changeColor();
         }
 
         function changePattern() {
