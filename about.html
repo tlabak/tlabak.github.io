@@ -56,16 +56,57 @@
         <div class="square"></div>
     </div>
     <script>
-        const squares = document.querySelectorAll(".square");
+        let currentPattern = 1;
+
         let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
         let currentColor = 0;
 
-        setInterval(() => {
-            squares.forEach(square => {
-                square.style.backgroundColor = colors[currentColor];
-            });
-            currentColor = (currentColor + 1) % colors.length;
-        }, 1000);
+        function pattern1() {
+            setInterval(() => {
+                squares.forEach(square => {
+                    square.style.backgroundColor = colors[currentColor];
+                });
+                currentColor = (currentColor + 1) % colors.length;
+            }, 1000);
+        }
+
+        function pattern2() {
+            setInterval(() => {
+                squares.forEach((square, i) => {
+                    let row = Math.floor(i / 3);
+                    let col = i % 3;
+                    if(row === col) {
+                        square.style.backgroundColor = colors[currentColor];
+                    }
+                });
+                currentColor = (currentColor + 1) % colors.length;
+            }, 1000);
+        }
+
+        function pattern3() {
+            setInterval(() => {
+                squares.forEach((square, i) => {
+                    if(i % 2 === 0) {
+                        square.style.backgroundColor = colors[currentColor];
+                    }
+                });
+                currentColor = (currentColor + 1) % colors.length;
+            }, 1000);
+        }
+
+        function changePattern() {
+            if (currentPattern === 1) {
+                pattern1();
+            } else if (currentPattern === 2) {
+                pattern2();
+            } else {
+                pattern3();
+            }
+            currentPattern = (currentPattern + 1) % 3;
+            setTimeout(changePattern, 10000);
+        }
+
+        changePattern();
     </script>
     <footer>
         <ul>
