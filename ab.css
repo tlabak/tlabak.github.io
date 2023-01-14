@@ -4,7 +4,7 @@
     background-color: #000000;
   }
   to {
-    background-color: #fff0db;
+    background-color: #EFE3D0;
   }
 }
 
@@ -43,13 +43,13 @@ font-size: 1.15em;
 hr{
   height:5px;
   border-width:0;
-  background-color:#D710DE;
+  background-color:#201810;
   border-top: 1px;
 }
 a {
   font-size: 1.5em;
   text-decoration: none;
-  color: #ffffff;
+  color: #201810;
   text-align: center;
 }
 a:hover {
@@ -58,11 +58,11 @@ a:hover {
 h1 {
   font-size: 2.25em;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  color: #D710DE;
+  color: #A4491D;
 }
 h2 {
 text-align: center;
-color: 	#ffffff;
+color: 	#237F63;
 font-family: tahoma;
 font-size: 1.5em;
 font-weight: bold;
@@ -90,7 +90,7 @@ overflow: hidden;
 footer {
   height:5px;
   border-width:0;
-  background-color:#D710DE;
+  background-color:#201810;
   font-size: .8em;
 }
 
@@ -106,7 +106,7 @@ ul.posts li {
 /* This is the typewriter animation */
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #D710DE; /* The typwriter cursor */
+    border-right: .15em solid #A4491D; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -131,5 +131,5 @@ ul.posts li {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #D710DE; }
+    50% { border-color: #A4491D; }
   }
