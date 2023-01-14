@@ -134,8 +134,8 @@ ul.posts li {
 
   /* DISCO DANCE FLOOR */
   #disco-floor {
-    width: 750px;
-    height: 750px;
+    width: 450px;
+    height: 450px;
     display: grid;
     overflow: visible;
     grid-template-columns: repeat(3, 1fr);
@@ -144,7 +144,7 @@ ul.posts li {
     top: 0;
     left: 0;
     z-index: -1;
-    grid-gap: 25px; /* Add this to add gap between squares */
+    grid-gap: 15px; /* Add this to add gap between squares */
   }
 
   .square {
