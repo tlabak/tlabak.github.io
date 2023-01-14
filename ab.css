@@ -152,7 +152,7 @@ ul.posts li {
   .square {
     width: 100%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.35;
     background-color: #fff;
     border: 0px solid #000;
     animation: disco 1s ease-in-out infinite;
