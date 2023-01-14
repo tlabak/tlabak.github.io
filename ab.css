@@ -134,8 +134,8 @@ ul.posts li {
 
   /* DISCO DANCE FLOOR */
   #disco-floor {
-    width: 300px;
-    height: 300px;
+    width: 750px;
+    height: 750px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
