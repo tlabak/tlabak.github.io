@@ -137,13 +137,14 @@ ul.posts li {
     width: 750px;
     height: 750px;
     display: grid;
+    overflow: visible;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
-    grid-gap: 10px; /* Add this to add gap between squares */
+    grid-gap: 25px; /* Add this to add gap between squares */
   }
 
   .square {
