@@ -13,7 +13,7 @@ body {
   width: 80%;
   font-family: system-ui, monospace;
   font-weight: normal;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
   animation-fill-mode: forwards;
   /*background-color: #fff0db;
   transition: background-color 0.5s ease-in-out; */
