@@ -5,18 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="ab.css">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
-    <script>
-        const squares = document.querySelectorAll(".square");
-        let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
-        let currentColor = 0;
-
-        setInterval(() => {
-            squares.forEach(square => {
-                square.style.backgroundColor = colors[currentColor];
-            });
-            currentColor = (currentColor + 1) % colors.length;
-        }, 1000);
-    </script>
 </head>
 <body>
     <div class="typewriter">
@@ -67,6 +55,18 @@
         <div class="square"></div>
         <div class="square"></div>
     </div>
+    <script>
+        const squares = document.querySelectorAll(".square");
+        let colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
+        let currentColor = 0;
+
+        setInterval(() => {
+            squares.forEach(square => {
+                square.style.backgroundColor = colors[currentColor];
+            });
+            currentColor = (currentColor + 1) % colors.length;
+        }, 1000);
+    </script>
     <footer>
         <ul>
             <br>
