@@ -145,12 +145,14 @@ ul.posts li {
     left: 50%;
     z-index: -1;
     grid-gap: 15px; /* Add this to add gap between squares */
+    transform: translate(-50%,-50%);
+    margin: auto;
   }
 
   .square {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.4;
     background-color: #fff;
     border: 0px solid #000;
     animation: disco 1s ease-in-out infinite;
