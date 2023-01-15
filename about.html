@@ -72,10 +72,14 @@
                     let col = i % 3;
                     if(row === col) {
                         square.style.backgroundColor = colors[currentColor];
+                    } else {
+                        square.style.backgroundColor = colors[colors.length - 1];
                     }
                 } else {
                     if(i % 2 === 0) {
                         square.style.backgroundColor = colors[currentColor];
+                    } else {
+                        square.style.backgroundColor = colors[colors.length - 1];
                     }
                 }
             });
