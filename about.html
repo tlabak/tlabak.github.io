@@ -85,7 +85,6 @@
 
         function changePattern() {
             clearTimeout(intervalId);
-            currentColor = 0;
             changeColor();
             currentPattern = (currentPattern + 1) % 3;
             setTimeout(changePattern, 10000);
