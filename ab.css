@@ -160,3 +160,63 @@ ul.posts li {
     align-items: center;
     justify-content: center;
   }
+  /*This is the margin line decoration*/
+  .left-color-1 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(5% - 3px);
+}
+
+.left-color-2 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 3px);
+}
+
+.left-color-3 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(95% - 3px);
+}
+
+.right-color-1 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: calc(5% - 3px);
+}
+
+.right-color-2 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: calc(50% - 3px);
+}
+
+.right-color-3 {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: calc(95% - 3px);
+}
