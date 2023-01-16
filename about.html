@@ -131,7 +131,11 @@
                 currentDiagonal = (currentDiagonal === "topLeftToBottomRight" ? "topRightToBottomLeft" : "topLeftToBottomRight");
             }
             currentColor = (currentColor + 1) % colors.length;
-            randomColor = (randomColor + 1) % colors.length;
+            if(randomColor !== 0){
+                randomColor = (randomColor - 1) % colors.length;
+            } else {
+                randomColor = 6;
+            }
             intervalId = setTimeout(changeColor, 1000);
         }
 
