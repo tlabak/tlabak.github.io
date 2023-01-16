@@ -65,6 +65,12 @@
         let currentDiagonal = "topLeftToBottomRight";
 
         function changeColor() {
+            let randomColor = Math.floor(Math.random() * colors.length);
+            if(randomColor === currentColor && randomColor !== colors.length){
+                randomColor += 1;
+            } else {
+                randomColor -= 1;
+            }
             clearTimeout(intervalId);
             squares.forEach((square, i) => {
                 let row = Math.floor(i / 3);
@@ -73,13 +79,13 @@
                     if((currentDiagonal === "topLeftToBottomRight" && row === col) || (currentDiagonal === "topRightToBottomLeft" && row + col === 2)) {
                         square.style.backgroundColor = colors[currentColor];
                     } else {
-                        square.style.backgroundColor = colors[currentColor-1];
+                        square.style.backgroundColor = colors[randomColor];
                     }
                 } else if(currentPattern === 1) {
                     square.style.backgroundColor = colors[currentColor];
                 } else {
                     if(i % 2 === 0) {
-                        square.style.backgroundColor = colors[currentColor-1];
+                        square.style.backgroundColor = colors[randomColor];
                     }
                 }
             });
