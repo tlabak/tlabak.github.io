@@ -50,6 +50,30 @@
             This will express my passions in art
         </p>
     </div>
+    <script>
+        let leftColor1 = document.querySelector('.left-color-1');
+        let leftColor2 = document.querySelector('.left-color-2');
+        let leftColor3 = document.querySelector('.left-color-3');
+        let rightColor1 = document.querySelector('.right-color-1');
+        let rightColor2 = document.querySelector('.right-color-2');
+        let rightColor3 = document.querySelector('.right-color-3');
+
+        let lineColors = ["#40A390", "#01779D", "#AF6E8E", "#DD6767", "#F56C28", "#FC9627"];
+        let currentLINEColor = 0;
+        let intervalLINEId;
+
+        function changeColor() {
+        leftColor1.style.backgroundColor = lineColors[currentLINEColor];
+        leftColor2.style.backgroundColor = lineColors[currentLINEColor];
+        leftColor3.style.backgroundColor = lineColors[currentLINEColor];
+        rightColor1.style.backgroundColor = lineColors[currentLINEColor];
+        rightColor2.style.backgroundColor = lineColors[currentLINEColor];
+        rightColor3.style.backgroundColor = lineColors[currentLINEColor];
+        currentLINEColor = (currentLINEColor + 1) % lineColors.length;
+        intervalLINEId = setTimeout(changeColor, 1000);
+        }
+        changeColor();
+    </script>
     <div id="disco-floor">
         <div class="square"></div>
         <div class="square"></div>
