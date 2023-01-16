@@ -139,7 +139,7 @@ ul.posts li {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #A4491D; }
+    50% { border-color: #201810; }
   }
 
   /* DISCO DANCE FLOOR */
