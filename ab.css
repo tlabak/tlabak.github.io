@@ -164,7 +164,7 @@ ul.posts li {
   /*This is the margin line decoration*/
   .left-color-1 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
@@ -173,7 +173,7 @@ ul.posts li {
 
 .left-color-2 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
@@ -182,16 +182,16 @@ ul.posts li {
 
 .left-color-3 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
-    left: calc(40px + 6px + 3px);
+    left: calc(40px + 6px);
 }
 
 .right-color-1 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
@@ -200,7 +200,7 @@ ul.posts li {
 
 .right-color-2 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
@@ -209,9 +209,9 @@ ul.posts li {
 
 .right-color-3 {
     background-color: red;
-    width: 1px;
+    width: 10px;
     height: 80%;
     position: fixed;
     top: 40px;
-    right: calc(40px + 6px + 3px);
+    right: calc(40px + 6px);
 }
