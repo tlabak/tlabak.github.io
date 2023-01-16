@@ -72,9 +72,9 @@
 
         function changeColor() {
             clearTimeout(intervalId);
+            let randomColor = Math.floor(Math.random() * colors.length);
+            
             squares.forEach((square, i) => {
-                let randomColor = Math.floor(Math.random() * colors.length);
-                
                 let row = Math.floor(i / 3);
                 let col = i % 3;
                 if(currentPattern === 2) {
@@ -97,6 +97,7 @@
                 currentDiagonal = (currentDiagonal === "topLeftToBottomRight" ? "topRightToBottomLeft" : "topLeftToBottomRight");
             }
             currentColor = (currentColor + 1) % colors.length;
+            randomColor = (randomColor + 1) % colors.length;
             intervalId = setTimeout(changeColor, 1000);
         }
 
