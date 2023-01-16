@@ -164,54 +164,54 @@ ul.posts li {
   /*This is the margin line decoration*/
   .left-color-1 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
 }
 
 .left-color-2 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    left: 25px
+    top: 0px;
+    left: 50px
 }
 
 .left-color-3 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    left: calc(40px);
+    top: 0px;
+    left: 100px;
 }
 
 .right-color-1 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
 }
 
 .right-color-2 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    right: 25px
+    top: 0px;
+    right: 50px
 }
 
 .right-color-3 {
     background-color: white;
-    width: 10px;
+    width: 20px;
     height: 100vh;
     position: fixed;
-    top: 40px;
-    right: 40px;
+    top: 0px;
+    right: 100px;
 }
