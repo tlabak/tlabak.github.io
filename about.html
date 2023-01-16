@@ -58,7 +58,7 @@
     <script>
         let squares = document.querySelectorAll('.square');
         let currentPattern = 1;
-        let colors = ["#308B96", "#F7832A", "#DE6765", "#3FA490", "#B17090", "#FC9627"];
+        let colors = ["#40A390", "#01779D", "#AF6E8E", "#DD6767", "#F56C28", "#FC9627"];
         let currentColor = 0;
         let intervalId;
 
@@ -69,9 +69,9 @@
             squares.forEach((square, i) => {
                 let randomColor = Math.floor(Math.random() * colors.length);
                 if(randomColor === currentColor && randomColor !== colors.length){
-                    randomColor += 1;
+                    randomColor += 2;
                 } else {
-                    randomColor -= 1;
+                    randomColor -= 2;
                 }
                 let row = Math.floor(i / 3);
                 let col = i % 3;
