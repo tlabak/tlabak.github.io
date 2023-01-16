@@ -59,20 +59,30 @@
         let rightColor3 = document.querySelector('.right-color-3');
 
         let lineColors = ["#40A390", "#01779D", "#AF6E8E", "#DD6767", "#F56C28", "#FC9627"];
-        let currentLINEColor = 0;
+        let currentLeftColor1 = 0;
+        let currentLeftColor2 = 1;
+        let currentLeftColor3 = 2;
+        let currentRightColor3 = 0;
+        let currentRightColor2 = 1;
+        let currentRightColor1 = 2;
         let intervalLINEId;
 
-        function changeColor() {
-        leftColor1.style.backgroundColor = lineColors[currentLINEColor];
-        leftColor2.style.backgroundColor = lineColors[currentLINEColor];
-        leftColor3.style.backgroundColor = lineColors[currentLINEColor];
-        rightColor1.style.backgroundColor = lineColors[currentLINEColor];
-        rightColor2.style.backgroundColor = lineColors[currentLINEColor];
-        rightColor3.style.backgroundColor = lineColors[currentLINEColor];
-        currentLINEColor = (currentLINEColor + 1) % lineColors.length;
-        intervalLINEId = setTimeout(changeColor, 1000);
+        function changeLINEColor() {
+        leftColor1.style.backgroundColor = colors[currentLeftColor1];
+        leftColor2.style.backgroundColor = colors[currentLeftColor2];
+        leftColor3.style.backgroundColor = colors[currentLeftColor3];
+        rightColor1.style.backgroundColor = colors[currentRightColor1];
+        rightColor2.style.backgroundColor = colors[currentRightColor2];
+        rightColor3.style.backgroundColor = colors[currentRightColor3];
+        currentLeftColor1 = (currentLeftColor1 + 1) % colors.length;
+        currentLeftColor2 = (currentLeftColor2 + 1) % colors.length;
+        currentLeftColor3 = (currentLeftColor3 + 1) % colors.length;
+        currentRightColor3 = (currentRightColor3 + 1) % colors.length;
+        currentRightColor2 = (currentRightColor2 + 1) % colors.length;
+        currentRightColor1 = (currentRightColor1 + 1) % colors.length;
+        intervalLINEId = setTimeout(changeLINEColor, 1000);
         }
-        changeColor();
+        changeLINEColor();
     </script>
     <div id="disco-floor">
         <div class="square"></div>
