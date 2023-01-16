@@ -58,7 +58,7 @@ hr{
 a {
   font-size: 1.5em;
   text-decoration: none;
-  color: #201810;
+  color: #4D2212;
   text-align: center;
 }
 a:hover {
@@ -67,11 +67,11 @@ a:hover {
 h1 {
   font-size: 2.25em;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  color: #A4491D;
+  color: #AF6E8E;
 }
 h2 {
 text-align: center;
-color: 	#237F63;
+color: 	#40A390;
 font-family: tahoma;
 font-size: 1.5em;
 font-weight: bold;
@@ -80,7 +80,7 @@ overflow: hidden;
 }
 h3 {
 text-align: center;
-color: #F4B444;
+color: #FC9627;
 font-style: italic;
 font-family: tahoma;
 font-size: 1.25em;
