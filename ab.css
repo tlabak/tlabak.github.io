@@ -13,7 +13,7 @@ body {
   width: 80%;
   font-family: system-ui, monospace;
   font-weight: normal;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
   animation-fill-mode: forwards;
   /*background-color: #fff0db;
   transition: background-color 0.5s ease-in-out; */
@@ -160,63 +160,58 @@ ul.posts li {
     align-items: center;
     justify-content: center;
   }
+
   /*This is the margin line decoration*/
   .left-color-1 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: calc(5% - 3px);
+    top: 40px;
+    left: 40px;
 }
 
 .left-color-2 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 3px);
+    top: 40px;
+    left: calc(40px + 3px);
 }
 
 .left-color-3 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: calc(95% - 3px);
+    top: 40px;
+    left: calc(40px + 6px + 3px);
 }
 
 .right-color-1 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: calc(5% - 3px);
+    top: 40px;
+    right: 40px;
 }
 
 .right-color-2 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: calc(50% - 3px);
+    top: 40px;
+    right: calc(40px + 3px);
 }
 
 .right-color-3 {
     background-color: red;
-    width: 3px;
-    height: 100%;
+    width: 1px;
+    height: 80%;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: calc(95% - 3px);
+    top: 40px;
+    right: calc(40px + 6px + 3px);
 }
