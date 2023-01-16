@@ -62,31 +62,31 @@
         let currentColor = 0;
         let intervalId;
 
-        let diagonalDirection = true;
+        let currentDiagonal = "topLeftToBottomRight";
 
         function changeColor() {
             clearTimeout(intervalId);
             squares.forEach((square, i) => {
-                if(currentPattern === 1){
-                    square.style.backgroundColor = colors[currentColor];
-                } else if(currentPattern === 2) {
-                    let row = Math.floor(i / 3);
-                    let col = i % 3;
-                    if((row === col && diagonalDirection) || (row + col === 2 && !diagonalDirection)) {
+                let row = Math.floor(i / 3);
+                let col = i % 3;
+                if(currentPattern === 2) {
+                    if((currentDiagonal === "topLeftToBottomRight" && row === col) || (currentDiagonal === "topRightToBottomLeft" && row + col === 2)) {
                         square.style.backgroundColor = colors[currentColor];
                     } else {
                         square.style.backgroundColor = colors[currentColor-1];
                     }
+                } else if(currentPattern === 1) {
+                    square.style.backgroundColor = colors[currentColor];
                 } else {
                     if(i % 2 === 0) {
-                        square.style.backgroundColor = colors[currentColor];
-                    } else {
                         square.style.backgroundColor = colors[currentColor-1];
                     }
                 }
             });
+            if(currentPattern === 2) {
+                currentDiagonal = (currentDiagonal === "topLeftToBottomRight" ? "topRightToBottomLeft" : "topLeftToBottomRight");
+            }
             currentColor = (currentColor + 1) % colors.length;
-            diagonalDirection = !diagonalDirection;
             intervalId = setTimeout(changeColor, 1000);
         }
 
