@@ -65,14 +65,14 @@
         let currentDiagonal = "topLeftToBottomRight";
 
         function changeColor() {
-            let randomColor = Math.floor(Math.random() * colors.length);
-            if(randomColor === currentColor && randomColor !== colors.length){
-                randomColor += 1;
-            } else {
-                randomColor -= 1;
-            }
             clearTimeout(intervalId);
             squares.forEach((square, i) => {
+                let randomColor = Math.floor(Math.random() * colors.length);
+                if(randomColor === currentColor && randomColor !== colors.length){
+                    randomColor += 1;
+                } else {
+                    randomColor -= 1;
+                }
                 let row = Math.floor(i / 3);
                 let col = i % 3;
                 if(currentPattern === 2) {
