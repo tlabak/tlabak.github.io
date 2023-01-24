@@ -46,7 +46,8 @@ nav ul li, footer ul li {
 p {
 text-align: left;
 color: #201810;
-font-family: tahoma;
+font-family: 'Shrikhand', cursive;
+font-weight: normal;
 font-size: 1.15em;
 }
 hr{
@@ -56,6 +57,8 @@ hr{
   border-top: 1px;
 }
 a {
+  font-family: 'Shrikhand', cursive;
+  font-weight: normal;
   font-size: 1.5em;
   text-decoration: none;
   color: #4D2212;
@@ -66,14 +69,15 @@ a:hover {
 }
 h1 {
   font-size: 2.25em;
-  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-family: 'Shrikhand', cursive;
+  font-weight: normal;
   color: #AF6E8E;
   animation: colorChange 1s ease-in-out;
 }
 h2 {
 text-align: center;
 color: 	#40A390;
-font-family: tahoma;
+font-family: 'Shrikhand', cursive;
 font-size: 1.75em;
 font-weight: bold;
 white-space: nowrap;
@@ -82,8 +86,8 @@ overflow: hidden;
 h3 {
 text-align: center;
 color: #FC9627;
-font-style: italic;
-font-family: tahoma;
+font-family: 'Shrikhand', cursive;
+font-weight: normal;
 font-size: 1.5em;
 white-space: nowrap;
 overflow: hidden;
@@ -91,9 +95,9 @@ overflow: hidden;
 h4 {
 text-align: center;
 color: #F4B444;
-font-family: tahoma;
+font-family: 'Shrikhand', cursive;
+font-weight: normal;
 font-size: 1em;
-font-style: italic;
 white-space: nowrap;
 overflow: hidden;
 }
