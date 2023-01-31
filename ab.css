@@ -178,11 +178,11 @@ ul.posts li {
   /*This is the margin line decoration*/
   .left-color-1 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    left: 0px;
+    left: 10px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
@@ -191,11 +191,11 @@ ul.posts li {
 
 .left-color-2 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    left: 50px;
+    left: 40px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
@@ -203,11 +203,11 @@ ul.posts li {
 
 .left-color-3 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    left: 100px;
+    left: 70px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
@@ -216,11 +216,11 @@ ul.posts li {
 
 .right-color-1 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    right: 0px;
+    right: 10px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
@@ -228,11 +228,11 @@ ul.posts li {
 
 .right-color-2 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    right: 50px;
+    right: 40px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
@@ -240,11 +240,11 @@ ul.posts li {
 
 .right-color-3 {
     background-color: white;
-    width: 35px;
+    width: 25px;
     height: 100vh;
     position: fixed;
     top: 0px;
-    right: 100px;
+    right: 70px;
     animation: extendLine 1s ease-in-out;
     animation-fill-mode: forwards;
     z-index: -1;
