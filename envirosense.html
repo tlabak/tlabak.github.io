@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trey's Website">
+    <meta name="author" content="Trey">
+    
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>EnviroSense</title>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="/STYLE/green-yellow.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="back-link">back</a></li>
+            <li><a class="page-scroll" href="#overview">overview</a></li>
+            <li><a class="page-scroll" href="#media">media</a></li>
+            <li><a class="page-scroll" href="#description">description</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content sections -------------------------------------------------------------------->
+    <!-- intro section -->
+    <div class="intro-container">
+        <!-- Intro section -->
+        <section id="intro">
+            <div style="float:left; width:60%;">
+                <h1>this is <span style="color:#FFE77A;"><b>EnviroSense.</b></span></h1>
+                <h2>Embedded Systems | C | Python | Energy-Harvesting</h2>
+                <p>An energy-harvesting, environmental tracker that provides a long-term, sustainable solution for collecting, interpreting, and analyzing data.</p>
+            </div>
+            <!-- Project Image -->
+            <div class="icon-container" style="float:right; width:40%;">
+                    <img src="/IMAGES/envirosense.gif" width="360" height="330">
+            </div> 
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- portfolio section -->
+    <div class="overview-container">
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>At the core of our project is an energy-harvesting embedded system that serves as an environmental tracker, capable of measuring a variety of parameters including light intensity (luminosity), temperature, humidity, pressure, soil moisture, soil acidity, air quality, and UV radiation. The system is designed to be an advocate for environmental awareness within the local environment where it will be deployed, as well as a long-term implementation research tool for collecting data on the environment over the course of several years to illuminate any changes within the local environment and provide current environmental characteristics and analysis.</p>
+        </section>
+    </div>
+        
+    <!-- About section -->
+    <div class="media-container">
+        <section id="media">
+            <h1>Media</h1>
+            <div class="three-columns">
+                <div class="box"><p></p><img src="/IMAGES/envirosense1.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/envirosense2.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/envirosense3.JPG" width="340" height="320"></div>
+            </div>
+            <div class="video-container">   
+                <iframe class="youtube-video" style="display:block; margin:0 auto;" width="640" height="360" src="https://www.youtube.com/embed/D9UYoQIZ3GI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+                <div class="two-columns">
+                    <div class="box"><h2><a href="./envirosense-website.html">EnviroSense Website</a></h2></div>
+                    <div class="box"><h2><a href="https://github.com/tlabak/EnviroSense" target="_blank">Github Repository</a></h2></div>
+                </div>
+        </section>
+    </div>
+    
+    <hr>
+    
+    <!-- Contact section -->
+    <div class="description-container">
+        <section id="description">
+            <h1>Description</h1>
+            <p>EnviroSense is an energy-harvesting, environmental monitoring system designed to gather and analyze data from various sensors in real-time. It consists of three key layers: the Embedded Layer, the Gateway Layer, and the Cloud Layer.</p>
+            <img style="display:block; margin:0 auto;" src="/IMAGES/envirosense.JPG" width="740" height="560">
+            <ol>
+                <li><h2>Embedded Layer</h2></li>
+                <ul>
+                    <li>The Embedded Layer forms the foundation of the EnviroSense system and includes the hardware and firmware components for the functionality of environmental data collection.</li>
+                    <li>Hardware Design: The hardware incorporates a range of sensors to measure environmental parameters such as light intensity, UV index, water level, temperature, humidity, air quality, pressure, and pH. These sensors may use different communication protocols like I2C, SPI, analog or digital inputs to read the data. Energy-harvesting mechanisms, such as photovoltaic (PV) panels, are utilized to power the embedded system.</li>
+                    <li>Energy Management: An MPPT (Maximum Power Point Tracking) controller and a DC/DC converter are employed to efficiently harvest and regulate power from the PV panels. This ensures optimal utilization of the available solar energy.</li>
+                    <li>Firmware: The firmware for the Embedded layer handles sensor data collection, calibration, and conversion into meaningful units. It utilizes specific algorithms and formulas to process the raw sensor readings. Additionally, it implements low power operation techniques as well as LoRa wireless communication for data packaging.</li>
+                    <li>Wireless Communication: LoRa (Long-Range) wireless communication technology is employed to transmit sensor data from the embedded system to the gateway. LoRa enables long-range and low-power communication, making it ideal for IoT applications.</li>
+                    <li>Low-Power Operation: The embedded system incorporates low-power intermittent operations, where it periodically enters a power-down mode to conserve energy. It utilizes hardware interrupts to awaken the system when necessary.</li>
+                </ul>
+                <li><h2>Gateway Layer</h2></li>
+                <ul>
+                    <li>The Gateway Layer acts as a bridge between the embedded devices and the cloud server, facilitating data transmission and processing.</li>
+                    <li>LoRa to UART Communication: The receiving LoRa module in the gateway receives the sensor data transmitted by the embedded devices via LoRa. It uses UART (Universal Asynchronous Receiver-Transmitter) communication to transfer the received data to the gateway's microcontroller the ESP32.</li>
+                    <li>WebSockets Connection: The gateway establishes a WebSockets connection with the cloud server. WebSockets enable real-time bidirectional communication between the gateway and the server, allowing seamless data transmission.</li>
+                </ul>
+                <li><h2>Cloud Layer</h2></li>
+                <ul>
+                    <li>The Cloud Layer is responsible for processing, storing, and presenting the received sensor data in a user-friendly manner.</li>
+                    <li>Tornado-Based Python Server: The cloud server hosting the EnviroSense application is implemented using Tornado, a Python web framework. The Tornado-based server handles incoming WebSocket connections, receives data from the gateway, and serves as the communication hub between the gateway and the cloud.</li>
+                    <li>Data Processing: The server code implemented in Python processes the incoming sensor data, extracting relevant information and performing necessary computations or analysis.</li>
+                    <li>Website Hosting: The Python server hosts a website where users can access and visualize the environmental data. The website provides a user-friendly interface to monitor and analyze the collected sensor data.</li>
+                </ul>
+            </ol>
+            <ul>
+                <li><h2>Future Work</h2></li>
+                <ul>
+                    <li>PCB Design: In order to optimize the hardware design of EnviroSense, developing a custom printed circuit board (PCB) can be explored. A PCB would allow for a more compact and integrated solution, reducing the overall size and improving the layout of components. To overall have a defined, concrete design of the embedded system. </li>
+                    <li>ML Algorithm Integration: To unlock more advanced insights and trends from the collected environmental data, integrating machine learning (ML) algorithms can be considered. ML models can be trained to detect patterns, correlations, and anomalies in the data, enabling predictive analytics and proactive decision-making....</li>
+                </ul>
+            </ul>
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- OVERLAY --> 
+    
+    <div class="overlay" id="overlay">
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+    </div>
+    
+    <!-- JavaScript -------------------------------------------------------------------->
+    <script>
+        // Wait for the document to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            var containers = document.querySelectorAll('.content-container');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Add scroll event listener to check visibility of elements
+            window.addEventListener('scroll', function() {
+                containers.forEach(function(container) {
+                    var titleElement = container.querySelector('.content-container h2');
+                    if (titleElement && isInViewport(container)) {
+                        titleElement.classList.add('.content-container h2');
+                    } else {
+                        titleElement.classList.remove('.content-container h2');
+                    }
+                });
+            });
+        });
+        
+        // Scrolling Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'page-scroll' class
+            var pageScrollLinks = document.getElementsByClassName('page-scroll');
+
+            // Add click event listeners to each page-scroll link
+            for (var i = 0; i < pageScrollLinks.length; i++) {
+                pageScrollLinks[i].addEventListener('click', scrollToElement);
+            }
+
+            // Function to scroll to the target element
+            function scrollToElement(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var targetId = this.getAttribute('href');
+
+                // Scroll smoothly to the target element
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Page Transition
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            slideToPage('./index.html');
+        });
+
+        function slideToPage(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const iframe = document.getElementById('iframe');
+
+            overlay.style.transform = 'translateX(0)';
+            iframe.src = pageURL;
+
+            // Change the main window's location after a delay to allow the transition to start
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 350);
+        }
+		</script>
+</body>
+</html>

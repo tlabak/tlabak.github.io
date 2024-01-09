@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html id="top">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trey's Website">
+    <meta name="author" content="Trey">
+    
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>Wireless Power</title>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="/STYLE/purple-pink.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="back-link">back</a></li>
+            <li><a class="page-scroll" href="#overview">overview</a></li>
+            <li><a class="page-scroll" href="#media">media</a></li>
+            <li><a class="page-scroll" href="#description">description</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content sections -------------------------------------------------------------------->
+    <!-- intro section -->
+    <div class="intro-container">
+        <!-- Intro section -->
+        <section id="intro">
+            <div style="float:left; width:60%;">
+                <h1>this is <span style="color:#f162ff;"><b>WTP.</b></span></h1>
+                <h2>Electromagnetism | Power Electronics</h2>
+                <p>This project explores the concept of wireless transmission of power (WTP), aiming to eliminate the need for physical connections between electronic devices by utilizing time-varying electromagnetic fields, and focuses on developing a power electronics PCB module for integration into personal electronic devices while experimenting with the range and efficiency of wireless power transfer.</p>
+            </div>
+            <!-- Project Image -->
+            <div class="icon-container" style="float:right; width:40%;">
+                    <img src="/IMAGES/Radiation.gif" width="360" height="330">
+            </div> 
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- portfolio section -->
+    <div class="overview-container">
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>Wireless Transmission of Power (WTP) is a sophisticated, marvelous attribute of nature in electrodynamics. It involves transmitting electrical power without a physical link and, in near-field applications, utilizing time-varying electromagnetic (EM) fields to transfer power wirelessly. The purpose of the project for wireless transmission of power between electronic devices is to mitigate the need for a physical link between a source and a load for mobile devices, which effectively decreases the requirement for additional infrastructure within the power system and the increase of range for an electronic device to receive power liberally. Additionally, experimentation allowed for the exploration of defining how the parameters of a wireless power electronics system dictated the efficiency of the power transfer, aiming to achieve the ideal combination of parameter conditions for an optimal efficiency. This project focused on developing a power electronics PCB module that ought to be implemented within personal electronic devices, such as a smart phone or a laptop computer, as well as experimenting with the extents of the transmission of wireless power.</p>
+        </section>
+    </div>
+        
+    <!-- About section -->
+    <div class="media-container">
+        <section id="media">
+            <h1>Media</h1>
+            <div class="three-columns">
+                <div class="box"><p></p><img src="/IMAGES/schematic.jpg" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/w-power-trans.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/results.jpg" width="340" height="320"></div>
+            </div>
+            <div class="video-container">   
+                <iframe class="youtube-video" style="display:block; margin:0 auto;" width="640" height="360" src="https://www.youtube.com/embed/8B0BmD0yBdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+    
+    <hr>
+    
+    <!-- Contact section -->
+    <div class="description-container">
+        <section id="description">
+            <h1>Description</h1>
+            <ul>
+                <ol>
+                <li><h2>Full-Bit Adder Circuits</h2></li>
+                    <ul>
+                    <li>In this case study, four types of full-bit adder circuits are compared: carry ripple adder (CRA), carry lookahead adder (CLA), carry skip adder (CSA), and carry select adder (CSeA). These adder circuits are essential components of a 32-bit CPU and are evaluated based on their performance, delays, and speed. Each adder design follows the same test bench Verilog file, but they differ in their topology and processing methods, aiming to achieve an ideal ALU (Arithmetic Logic Unit) block.</li>
+                    <br>
+                    <ol>
+                        <li>Carry Ripple Adder (CRA)</li>
+                        <ul><li>The Carry Ripple Adder (CRA) is the simplest adder design among the four compared in the case study. It consists of n-bit full adders that are connected in a cascade, where the carry output of one stage becomes the carry input of the next stage. The main advantage of CRA is its simplicity, as it requires minimal hardware. However, its performance is limited by the sequential nature of the carry propagation, resulting in longer propagation delays. As a result, the CRA design may not be suitable for applications that require fast addition operations.</li></ul>
+                        <img style="display:block; margin:0 auto;" src="/IMAGES/CRA.jpg" width="780" height="240">
+                        <li>Carry Lookahead Adder (CLA)</li>
+                        <ul><li>The Carry Lookahead Adder (CLA) design improves upon the CRA by incorporating additional logic circuits to compute the carry signals in parallel, rather than relying on sequential carry propagation. This parallel computation reduces the carry propagation delay significantly, resulting in faster addition operations compared to CRA. However, the implementation of additional logic circuits introduces more complex hardware, increasing the area and power requirements of the CLA design. It may also lead to increased design complexity and higher manufacturing costs.</li></ul>
+                        <img style="display:block; margin:0 auto;" src="/IMAGES/CLA.jpg" width="560" height="320">
+                        <li>Carry Skip Adder (CSA)</li>
+                        <ul><li>The Carry Skip Adder (CSA) design aims to further enhance the speed of addition operations by dividing the operands into separate blocks, each containing CRA circuits. These blocks perform the addition operations in parallel, allowing for concurrent computation of carry signals. By utilizing parallelism, CSA achieves faster addition speeds compared to both CRA and CLA. However, CSA requires additional hardware for block division and skip logic, which increases the overall complexity, area, and power consumption of the adder design. This additional hardware may also introduce additional delay, affecting critical timing paths.</li></ul>
+                        <img style="display:block; margin:0 auto;" src="/IMAGES/CSA.jpg" width="560" height="260">
+                        <li>Carry Select Adder (CSeA)</li>
+                        <ul><li>The Carry Select Adder (CSeA) design shares similarities with the CSA, as it also divides the bit operations into blocks. However, in addition to dividing the operands, CSeA divides the operations of each bit and incorporates hard-coded carry-in signals. This eliminates the reliance on carry signals from other adders, reducing the critical path delay. By implementing two separate summations, each with a predetermined carry bit (0 and 1), CSeA effectively reduces the propagation delay associated with carry generation. Furthermore, the inclusion of a multiplexer layer that selects the original carry input bit allows for additional flexibility in carry propagation. However, the additional hardware for carry selection and the multiplexer layer increase the complexity, area, and power consumption of the CSeA design.</li></ul>
+                        <img style="display:block; margin:0 auto;" src="/IMAGES/CSeA.jpg" width="560" height="360">
+                    </ol>
+                </ul>
+                <li><h2>New ALU Architecture</h2></li>
+                <ul>
+                    <li>The new ALU architecture aims to optimize the performance, speed, and delay of operations within a CPU. It introduces a 32-bit comparator and a 4x2 multiplexer to enhance the functionality of the ALU. The primary objective of this architecture is to determine the comparative relationship between two 32-bit words stored in registers A and B.</li>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/alu-arch.JPG" width="560" height="240">
+                    <li>The 32-bit comparator is a key component of the new ALU architecture. It compares each corresponding pair of bits from the two input words (A and B) and generates binary outputs based on the comparison results. The comparator is implemented using a series of 2-bit comparators, allowing for simultaneous comparison of each bit. This approach enables efficient comparison operations within the ALU.</li>
+                    <li>The comparator's output provides information about the relative magnitudes of the two input words. It generates the following output cases:
+                        <ol>
+                            <li>If A = B: The output of the comparator is "10". This indicates that the two input words A and B are equal.</li>
+                            <li>If A > B: The output of the comparator is "01". This suggests that the value stored in register A is greater than the value stored in register B.</li>
+                            <li>If A < B: The output of the comparator is "00". This signifies that the value stored in register A is less than the value stored in register B.</li>
+                        </ol>
+                    </li>
+                    <li>The 32-bit comparator plays a crucial role in various applications, such as sorting, searching, and decision-making processes. By providing a straightforward and efficient means of comparing 32-bit words, it enhances the overall functionality and versatility of the ALU. In addition to the comparator, the new ALU architecture includes a series of multiplexers. Specifically, it consists of five layers of multiplexers, with the number of multiplexers decreasing in each subsequent layer until reaching layer 0, which contains a single multiplexer. These multiplexers are responsible for selecting appropriate inputs and determining the desired outputs based on the control signals and comparison results obtained from the 32-bit comparator. They enable the ALU to perform various operations, such as arithmetic calculations, logical operations, and data manipulation, based on the defined control logic.</li>
+                </ul>
+            </ol>
+        </section>
+    </div>
+    
+    <hr>
+        
+    <!-- OVERLAY --> 
+    <div class="overlay" id="overlay">
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <!-- JavaScript -------------------------------------------------------------------->
+    <script>
+        // Wait for the document to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            var containers = document.querySelectorAll('.content-container');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Add scroll event listener to check visibility of elements
+            window.addEventListener('scroll', function() {
+                containers.forEach(function(container) {
+                    var titleElement = container.querySelector('.content-container h2');
+                    if (titleElement && isInViewport(container)) {
+                        titleElement.classList.add('.content-container h2');
+                    } else {
+                        titleElement.classList.remove('.content-container h2');
+                    }
+                });
+            });
+        });
+        
+        // Scrolling Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'page-scroll' class
+            var pageScrollLinks = document.getElementsByClassName('page-scroll');
+
+            // Add click event listeners to each page-scroll link
+            for (var i = 0; i < pageScrollLinks.length; i++) {
+                pageScrollLinks[i].addEventListener('click', scrollToElement);
+            }
+
+            // Function to scroll to the target element
+            function scrollToElement(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var targetId = this.getAttribute('href');
+
+                // Scroll smoothly to the target element
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Page Transition
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            slideToPage('./index.html');
+        });
+
+        function slideToPage(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const iframe = document.getElementById('iframe');
+
+            overlay.style.transform = 'translateX(0)';
+            iframe.src = pageURL;
+
+            // Change the main window's location after a delay to allow the transition to start
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 350);
+        }
+		</script>
+</body>
+</html>

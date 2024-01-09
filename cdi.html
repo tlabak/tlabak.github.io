@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trey's Website">
+    <meta name="author" content="Trey">
+    
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>CDI</title>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="/STYLE/orange-beige.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="back-link">back</a></li>
+            <li><a class="page-scroll" href="#overview">overview</a></li>
+            <li><a class="page-scroll" href="#media">media</a></li>
+            <li><a class="page-scroll" href="#description">description</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content sections -------------------------------------------------------------------->
+    <!-- intro section -->
+    <div class="intro-container">
+        <!-- Intro section -->
+        <section id="intro">
+            <div style="float:left; width:60%;">
+                <h1>this is <span style="color:#CD9C8A;"><b>CDI.</b></span></h1>
+                <h2>Machine Learning | Embedded Systems</h2>
+                <p>Congenital Disorder Identifier employing computer vision to detect congenital diseases in resource-constrained areas, showcasing self-contained operation and local model training.</p>
+            </div>
+            <!-- Project Image -->
+            <div class="icon-container" style="float:right; width:40%;">
+                    <img src="/IMAGES/NN.gif" width="360" height="330">
+            </div> 
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- portfolio section -->
+    <div class="overview-container">
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>The project focuses on the development of an embedded ML system, termed the "Congenital Disorder Identifier, Embedded Camera." Employing a computer vision ML model (FOMO MobileNetV2 0.1), the system performs complex visual tasks to identify external congenital diseases. Notably, it operates as a self-contained, portable device showcasing machine learning at the edge, eliminating the need for server connectivity. This design addresses the diagnostic gap in medical care in areas lacking network infrastructure, providing a fully-fledged ML solution for resource-constrained environments. The device conducts continuous data collection, model training, and deployment locally, emphasizing its autonomy and suitability for regions with limited network access. The project aims to bridge healthcare disparities by enabling on-site, advanced diagnostic capabilities in underserved areas.</p>
+        </section>
+    </div>
+        
+    <!-- About section -->
+    <div class="media-container">
+        <section id="media">
+            <h1>Media</h1>
+            <div class="three-columns">
+                <div class="box"><p></p><img src="/IMAGES/CDI_schem.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/proto_cdi.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/banana_data.JPG" width="340" height="320"></div>
+            </div>
+            <div class="video-container">
+              <iframe class="youtube-video" src="https://www.youtube.com/embed/sTM_gYvsnSM?si=XhPkq4bNF1HMrC7i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <div class="box"><h2><a href="https://github.com/tlabak/CDI" target="_blank">Github Repository</a></h2></div>
+        </section>
+    </div>
+    
+    <hr>
+    
+    <!-- Contact section -->
+    <div class="description-container">
+        <section id="description">
+            <h1>Description</h1>
+            <p>The "Congenital Disorder Identifier, Embedded Camera" is a self-contained, portable ML device for computer vision, enabling the identification of external congenital diseases without reliance on server connectivity.</p>
+            <ol>
+                <li><h2>Neural Networks</h2></li>
+                <ul>
+                    <li>Neural networks operate by leveraging interconnected layers that mimic the human brain's neural connections. These layers, organized in a hierarchical fashion, analyze input data in a series of transformations to extract intricate patterns and features. For object classification specifically, the neural network processes visual data and learns to recognize distinctive features associated with different objects.</li>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/NN_structure.JPG" width="620" height="360">
+                    <li>The process involves an initial input layer receiving raw pixel data, which then passes through multiple hidden layers. Each hidden layer contains neurons that apply mathematical operations to the input, gradually transforming it into a representation that highlights relevant features. These features become increasingly abstract as they move through the layers.</li>
+                    <li>During training, the neural network learns to adjust the weights and biases of its connections by comparing its output with the ground truth (correct classification). This iterative learning process, often facilitated by optimization algorithms, refines the network's internal parameters to improve its ability to accurately classify objects.</li>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/CDI_systemprocess.JPG" width="780" height="360">
+                    <li>In the case of object classification, the final output layer produces a probability distribution across different classes, indicating the likelihood of the input image belonging to each class. The class with the highest probability is then assigned as the predicted label for the object.</li>
+                    <li>The neural network's capability to learn and adapt from data allows it to excel at object recognition and classification tasks, making it a key technology for creating powerful visual ML diagnostic systems, especially when deployed at the edge in resource-constrained environments using tiny neural network architectures.</li>
+                </ul>
+                <li><h2>Models</h2></li>
+                <ul>
+                    <li>The project shifts focus to deploying on an edge device, emphasizing the importance of Tiny Machine Learning (Tiny ML). TensorFlow Lite, tailored for edge computing, is crucial for implementing machine learning on our embedded camera system due to its efficient model execution and reduced memory footprint. </li>
+                    <li>To achieve real-time, efficient object detection, we integrated the FOMO MobileNetV2 0.1 architecture, designed for rapid object detection with quick inference and accurate identification. </li>
+                    <li>The software implementation concludes by embedding the trained TensorFlow Lite model into the edge device's firmware, empowering it with real-time object detection and classification capabilities.</li>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/CV_algo.JPG" width="780" height="360">
+                </ul>
+                <li><h2>Case Studies</h2></li>
+                <ul>
+                    The purpose of these case studies is to validate the functionality of the embedded ML system, demonstrating its proficiency in real-time object identification, trait-based classification, and the classification of congenital disorders based on external features, while addressing challenges associated with medical data variability and emphasizing the importance of cultural considerations for accurate and adaptable diagnostic capabilities in diverse contexts.
+                    <br>
+                    <br>
+                    <li>Case Study I: <b>Foundational Object Classification</b></li>
+                    <ul><b>Objective: </b>Validate system flow and edge device capability in real-time object identification.</ul>
+                    <ul><b>Case Study: </b>Identifying varieties of fruits (Apples, Bananas, Grapes).</ul>
+                    <ul><b>Significance: </b>Demonstrates the edge device's proficiency in executing an ML model for basic object classification, laying the groundwork for subsequent studies.</ul>
+                    <div class="three-columns">
+                        <div class="box"><p></p><img src="/IMAGES/apple.JPG" width="240" height="240"></div>
+                        <div class="box"><p></p><img src="/IMAGES/fruit_features_map.jpg" width="340" height="260"></div>
+                        <div class="box"><p></p><img src="/IMAGES/grapes.JPG" width="240" height="240"></div>
+                    </div>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/I_perf.JPG" width="1040" height="150">
+                    <br>
+                    <li>Case Study II: <b>Trait-Based Banana Classification</b></li>
+                    <ul><b>Objective: </b>Transition from object identification to trait-based classification, simulating diagnostic processes.</ul>
+                    <ul><b>Case Study: </b>Classifying Bananas based on external features indicative of developmental stage.</ul>
+                    <ul><b>Significance: </b> Illustrates how a TinyML model can detect variations in a common entity, setting the stage for addressing more complex diagnostic challenges in the Congenital Disorder Classification case study.</ul>
+                    <div class="three-columns">
+                        <div class="box"><p></p><img src="/IMAGES/banana_ripe.JPG" width="240" height="240"></div>
+                        <div class="box"><p></p><img src="/IMAGES/banana_features_map.JPG" width="340" height="280"></div>
+                        <div class="box"><p></p><img src="/IMAGES/banana_overripse.JPG" width="240" height="240"></div>
+                    </div>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/II_perf.JPG" width="1040" height="150">
+                    <br>
+                    <li>Case Study III: <b>Congenital Disorder Classification</b></li>
+                    <ul><b>Objective: </b>Classify congenital disorders (Syndactyly, Cleft Lip) based on external features.</ul>
+                    <ul><b>Case Study: </b>Examining complexities in anomaly detection in human anatomy using diverse medical data.</ul>
+                    <ul><b>Significance: </b>Highlights challenges in real-world medical data (variations in lighting, quality) and introduces the importance of cultural considerations. Emphasizes the system's adaptability and sensitivity to both medical and cultural nuances for accurate diagnosis in diverse contexts.</ul>
+                    <div class="three-columns">
+                        <div class="box"><p></p><img src="/IMAGES/S_NO.JPG" width="240" height="240"></div>
+                        <div class="box"><p></p><img src="/IMAGES/s_features.JPG" width="380" height="340"></div>
+                        <div class="box"><p></p><img src="/IMAGES/S_YES.JPG" width="240" height="240"></div>
+                    </div>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/iii_s_perf.JPG" width="1040" height="150">
+                    <div class="three-columns">
+                        <div class="box"><p></p><img src="/IMAGES/C_NO.JPG" width="240" height="240"></div>
+                        <div class="box"><p></p><img src="/IMAGES/c_features.JPG" width="380" height="320"></div>
+                        <div class="box"><p></p><img src="/IMAGES/C_YES.JPG" width="240" height="240"></div>
+                    </div>
+                    <img style="display:block; margin:0 auto;" src="/IMAGES/iii_c_perf.JPG" width="1040" height="150">
+                </ul>
+            </ol>
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- OVERLAY --> 
+    
+    <div class="overlay" id="overlay">
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+    </div>
+    
+    <!-- JavaScript -------------------------------------------------------------------->
+    <script>
+        // Wait for the document to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            var containers = document.querySelectorAll('.content-container');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Add scroll event listener to check visibility of elements
+            window.addEventListener('scroll', function() {
+                containers.forEach(function(container) {
+                    var titleElement = container.querySelector('.content-container h2');
+                    if (titleElement && isInViewport(container)) {
+                        titleElement.classList.add('.content-container h2');
+                    } else {
+                        titleElement.classList.remove('.content-container h2');
+                    }
+                });
+            });
+        });
+        
+        // Scrolling Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'page-scroll' class
+            var pageScrollLinks = document.getElementsByClassName('page-scroll');
+
+            // Add click event listeners to each page-scroll link
+            for (var i = 0; i < pageScrollLinks.length; i++) {
+                pageScrollLinks[i].addEventListener('click', scrollToElement);
+            }
+
+            // Function to scroll to the target element
+            function scrollToElement(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var targetId = this.getAttribute('href');
+
+                // Scroll smoothly to the target element
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Page Transition
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            slideToPage('./index.html');
+        });
+
+        function slideToPage(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const iframe = document.getElementById('iframe');
+
+            overlay.style.transform = 'translateX(0)';
+            iframe.src = pageURL;
+
+            // Change the main window's location after a delay to allow the transition to start
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 350);
+        }
+		</script>
+</body>
+</html>
