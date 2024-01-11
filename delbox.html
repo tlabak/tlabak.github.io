@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html id="top">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trey's Website">
+    <meta name="author" content="Trey">
+    
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>DelBox</title>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="/STYLE/yellow-purple.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="back-link">back</a></li>
+            <li><a class="page-scroll" href="#overview">overview</a></li>
+            <li><a class="page-scroll" href="#media">media</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content sections -------------------------------------------------------------------->
+    <!-- intro section -->
+    <div class="intro-container">
+        <!-- Intro section -->
+        <section id="intro">
+            <div style="float:left; width:60%;">
+                <h1>this is <span style="color:#D668E3;"><b>DelBox.</b></span></h1>
+                <h2>Embedded Systems | C | IoT | App Development</h2>
+                <p>The project aims to enhance package delivery security by utilizing IoT technology. It includes a prototype that incorporates sensors to monitor the package's orientation and temperature, a cloud-based database for data storage, and a mobile application for real-time monitoring and remote control of the package's locking mechanism, ultimately providing a more secure and interactive delivery experience.</p>
+            </div>
+            <!-- Project Image -->
+            <div class="icon-container" style="float:right; width:40%;">
+                    <img src="/IMAGES/delbox.gif" width="360" height="330">
+            </div> 
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- portfolio section -->
+    <div class="overview-container">
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>To address the needs of ensuring the security of a package delivery, keeping the contents inside safe, the completion of the prototype “DelBox” provides a demonstration of a promising solution that incorporates Internet of Things (IoT) technology to create a harmonious cyber-physical system. The problem of concern is in regards to “porch pirates”, which have been on the rise in correlation to the increase in online shopping, where one willingly steals a package that typically sits on the porch of one’s house or apartment building. DelBox is an IoT system that takes in sensed data from its environment that includes the perception of its orientation and ambient temperature, to provide the user with information on the status of the package. The system assumes a 3-layered IoT architecture, using ThingSpeak for a cloud-based database, deployed with Google's Firebase platform to run the developed Android mobile application. Additionally, DelBox incorporates a locking system in which a user is provided a password to unlock the package and access the contents inside. The package communicates the information wirelessly in order to store its sensed data in the database that holds the vital parameters of the system. To provide insight to the user, an application allows for the viewing of the real-time characteristic parameters, such as if the box is open or close, locked or unlocked, and the ambient temperature as well as to control the locking mechanism remotely. Overall, DelBox takes a step in the direction of making the delivery process more secure.</p>
+        </section>
+    </div>
+        
+    <!-- About section -->
+    <div class="media-container">
+        <section id="media">
+            <h1>Media</h1>
+            <div class="three-columns">
+                <div class="box"><p></p><img src="/IMAGES/Delbox_comm.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/Delbox_proto.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/Delbox_app.JPG" width="340" height="320"></div>
+            </div>
+            <div class="video-container">       
+                <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/O1EFi03BMPA?si=GZ8AC7GpDNOiOLiJ&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="box"><h2><a href="https://github.com/tlabak/DelBox" target="_blank">Github Repository</a></h2></div>
+        </section>
+    </div>
+    
+    <hr>
+    
+    <!-- OVERLAY --> 
+    <div class="overlay" id="overlay">
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+    </div>
+    
+    <!-- JavaScript -------------------------------------------------------------------->
+    <script>
+        // Wait for the document to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            var containers = document.querySelectorAll('.content-container');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Add scroll event listener to check visibility of elements
+            window.addEventListener('scroll', function() {
+                containers.forEach(function(container) {
+                    var titleElement = container.querySelector('.content-container h2');
+                    if (titleElement && isInViewport(container)) {
+                        titleElement.classList.add('.content-container h2');
+                    } else {
+                        titleElement.classList.remove('.content-container h2');
+                    }
+                });
+            });
+        });
+        
+        // Scrolling Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'page-scroll' class
+            var pageScrollLinks = document.getElementsByClassName('page-scroll');
+
+            // Add click event listeners to each page-scroll link
+            for (var i = 0; i < pageScrollLinks.length; i++) {
+                pageScrollLinks[i].addEventListener('click', scrollToElement);
+            }
+
+            // Function to scroll to the target element
+            function scrollToElement(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var targetId = this.getAttribute('href');
+
+                // Scroll smoothly to the target element
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Page Transition
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            slideToPage('./index.html');
+        });
+
+        function slideToPage(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const iframe = document.getElementById('iframe');
+
+            overlay.style.transform = 'translateX(0)';
+            iframe.src = pageURL;
+
+            // Change the main window's location after a delay to allow the transition to start
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 350);
+        }
+		</script>
+</body>
+</html>

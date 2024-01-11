@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html id="top">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trey's Website">
+    <meta name="author" content="Trey">
+    
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>Wireless Power</title>
+
+    <!-- CSS styling -->
+    <link rel="stylesheet" href="/STYLE/purple-pink.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html" id="back-link">back</a></li>
+            <li><a class="page-scroll" href="#overview">overview</a></li>
+            <li><a class="page-scroll" href="#media">media</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Content sections -------------------------------------------------------------------->
+    <!-- intro section -->
+    <div class="intro-container">
+        <!-- Intro section -->
+        <section id="intro">
+            <div style="float:left; width:60%;">
+                <h1>this is <span style="color:#f162ff;"><b>WTP.</b></span></h1>
+                <h2>Electromagnetism | Power Electronics</h2>
+                <p>This project explores the concept of wireless transmission of power (WTP), aiming to eliminate the need for physical connections between electronic devices by utilizing time-varying electromagnetic fields, and focuses on developing a power electronics PCB module for integration into personal electronic devices while experimenting with the range and efficiency of wireless power transfer.</p>
+            </div>
+            <!-- Project Image -->
+            <div class="icon-container" style="float:right; width:40%;">
+                    <img src="/IMAGES/Radiation.gif" width="360" height="330">
+            </div> 
+        </section>
+    </div>
+    
+    <hr>
+
+    <!-- portfolio section -->
+    <div class="overview-container">
+        <section id="overview">
+            <h1>Overview</h1>
+            <p>Wireless Transmission of Power (WTP) is a sophisticated, marvelous attribute of nature in electrodynamics. It involves transmitting electrical power without a physical link and, in near-field applications, utilizing time-varying electromagnetic (EM) fields to transfer power wirelessly. The purpose of the project for wireless transmission of power between electronic devices is to mitigate the need for a physical link between a source and a load for mobile devices, which effectively decreases the requirement for additional infrastructure within the power system and the increase of range for an electronic device to receive power liberally. Additionally, experimentation allowed for the exploration of defining how the parameters of a wireless power electronics system dictated the efficiency of the power transfer, aiming to achieve the ideal combination of parameter conditions for an optimal efficiency. This project focused on developing a power electronics PCB module that ought to be implemented within personal electronic devices, such as a smart phone or a laptop computer, as well as experimenting with the extents of the transmission of wireless power.</p>
+        </section>
+    </div>
+        
+    <!-- About section -->
+    <div class="media-container">
+        <section id="media">
+            <h1>Media</h1>
+            <div class="three-columns">
+                <div class="box"><p></p><img src="/IMAGES/WTP_circuit.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/w-power-trans.JPG" width="340" height="320"></div>
+                <div class="box"><p></p><img src="/IMAGES/results.jpg" width="340" height="320"></div>
+            </div>
+            <div class="video-container">   
+                <iframe class="youtube-video" style="display:block; margin:0 auto;" width="640" height="360" src="https://www.youtube.com/embed/8B0BmD0yBdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+    
+    <hr>
+    
+    <!-- Contact section -->
+    
+    <!-- OVERLAY --> 
+    <div class="overlay" id="overlay">
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <!-- JavaScript -------------------------------------------------------------------->
+    <script>
+        // Wait for the document to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            var containers = document.querySelectorAll('.content-container');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Add scroll event listener to check visibility of elements
+            window.addEventListener('scroll', function() {
+                containers.forEach(function(container) {
+                    var titleElement = container.querySelector('.content-container h2');
+                    if (titleElement && isInViewport(container)) {
+                        titleElement.classList.add('.content-container h2');
+                    } else {
+                        titleElement.classList.remove('.content-container h2');
+                    }
+                });
+            });
+        });
+        
+        // Scrolling Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'page-scroll' class
+            var pageScrollLinks = document.getElementsByClassName('page-scroll');
+
+            // Add click event listeners to each page-scroll link
+            for (var i = 0; i < pageScrollLinks.length; i++) {
+                pageScrollLinks[i].addEventListener('click', scrollToElement);
+            }
+
+            // Function to scroll to the target element
+            function scrollToElement(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the href attribute of the clicked link
+                var targetId = this.getAttribute('href');
+
+                // Scroll smoothly to the target element
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Page Transition
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            slideToPage('./index.html');
+        });
+
+        function slideToPage(pageURL) {
+            const overlay = document.getElementById('overlay');
+            const iframe = document.getElementById('iframe');
+
+            overlay.style.transform = 'translateX(0)';
+            iframe.src = pageURL;
+
+            // Change the main window's location after a delay to allow the transition to start
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 350);
+        }
+		</script>
+</body>
+</html>
