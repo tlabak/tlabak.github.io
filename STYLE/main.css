@@ -297,6 +297,10 @@ hr {
     justify-content: center;
     align-items: center;
 }
+.youtube-video {
+  width: 740px;
+  height: 420px;
+}
 /* container */
 .three-columns {
     display:flex;
